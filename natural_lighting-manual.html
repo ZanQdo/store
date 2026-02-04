@@ -1,0 +1,83 @@
+<p><span style="font-size:20px;"><b><font color="#ff9c00" style="">Important: The UI has been moved from the 3D Viewport to the Light Data properties!</font></b></span></p>
+<p><span style="font-size:20px;">Quick introduction to using Natural Lighting:</span></p>
+<p></p>
+<div class="embed-responsive embed-responsive-16by9"><div class="ratio ratio-16x9"><iframe frameborder="0" src="//www.youtube.com/embed/10cCS0UbAl4" width="640" height="360" class="note-video-clip"></iframe></div>
+</div>
+<span style="font-size:1.25rem;"><br><br>Installation</span><p></p>
+<p>Instructions for Blender 3.0 or above. For Blender 2.93 see the <a href="https://blendermarket.com/products/natural-lighting/faq">FAQ</a><br></p>
+<h6>Setting up the asset library</h6>
+<p>Unpack the provided zip file somewhere in your system</p>
+<p>Go into the Blender Preferences and into the <i>File Paths</i> section</p>
+<p><img src="https://markets-rails.s3.amazonaws.com/cache/d5d1b950aca9f37ceabc60845914f6c5.png" style="max-width:100%;"><br></p>
+<p>Click on the <b>+</b> icon to add an asset library</p>
+<p></p>
+<p>Navigate into your extracted <i>Natural Lighting</i> folder and click on Add Asset Library</p>
+<p><i>Important: Do not click on the <b>Sources</b> directory. The path should end in <b>\Natural Lighting\</b> and not in <b>\Sources\</b></i></p>
+<p><img src="https://markets-rails.s3.amazonaws.com/cache/c0d8cf9219c37819939ff3a55f7a8a9d.png" style="max-width:100%;"></p>
+<p>Make sure your new asset library is correctly named</p>
+<p><img src="https://markets-rails.s3.amazonaws.com/cache/4dd583aed5dd1ea1b5af1d61ae0e130d.png" style="max-width:100%;"></p>
+<h6>Allowing Python Execution</h6>
+<p>It is recommended to allow automatic python execution in order for the asset UI to load automatically after dropping an asset into your scene. This setting can be found under the Save &amp; Load preferences.</p>
+<p><img src="https://markets-rails.s3.amazonaws.com/cache/83800c286fcab48657fcf93bae31fdbe.png" style="max-width:100%;"></p>
+<h5>Usage</h5>
+<p>Open up an Asset Browser window</p>
+<p>Switch to the&nbsp;<i>Natural Lighting</i> asset to be presented with the full list of Natural Lights!</p>
+<p><img src="https://markets-rails.s3.amazonaws.com/cache/e7f9b890c42bdb575ff509d6257551ab.png" style="max-width:100%;"><br></p>
+<p></p>
+<p>Drag one of the assets into your scene and position the lamp as required.</p>
+<p>Go to the&nbsp;<span style="font-size:1rem;"><b>Natural Lighting</b> tab in the</span><span style="font-size:1rem;">&nbsp;</span><b style="font-size:1rem;">Light Data Properties</b><span style="font-size:1rem;">&nbsp;to access the lighting interface!</span></p>
+<h5>Feature overview</h5>
+<p><i>Note: Some Natural Lights have slightly different functionality and interface.</i></p>
+<p><img src="https://markets-rails.s3.amazonaws.com/cache/c4d2de8446ba3922a0c0f4f071ddcdde.png" style="max-width:100%;"><br></p>
+<p></p>
+<p></p>
+<h5>Light</h5>
+<p>The main lighting controls are here:</p>
+<h6>Power</h6>
+<p>The energy of the lamp in Watts</p>
+<h6 style="color:rgb(232, 230, 227);">Exposure</h6>
+<p style="">Scales the power of the light exponentially</p>
+<h6>Spot Size</h6>
+<p>The angle of the spot size</p>
+<h6>Border Softness</h6>
+<p>The softness of the edge of the spot lamp</p>
+<h6>Temperature</h6>
+<p>The color of the main light in Kelvin based on <a href="https://en.wikipedia.org/wiki/Black-body_radiation" target="_blank">black body radiation</a>. You may be familiar with this type of measurements when buying a light bulb at the hardware store. For example 2500K will emit a warm yellow light, 6500K will emit a white light compared to daylight at noon, and 12000K will emit a cool blue light.</p>
+<p><img src="https://markets-rails.s3.amazonaws.com/cache/fbcae9cbcf080b6d1ab376f09b1b1edb.png" style="max-width:100%;"><img src="https://markets-rails.s3.amazonaws.com/cache/61a89d6e9294848e6ea6b69e016eedae.png" style="max-width:100%;"><img src="https://markets-rails.s3.amazonaws.com/cache/60b557695433980531f6b6e9e713ef80.png" style="max-width:100%;"></p>
+<h6>Tint</h6>
+<p>Allows to colorize the light with a simple RGB color picker.</p>
+<h5>Bloom</h5>
+<p>The bloom adds a soft warm glow, mostly visible at the edges of the shadows.&nbsp;<span style="font-size:1rem;">The bloom controls are:</span></p>
+<h6>Strength</h6>
+<p>A factor of the main light's power. a Strength of 0.0 means no warm edge effect, a strength of 0.5 means half of the power of the main light and a strength of 1.0 means the same power of the main light.</p>
+<p><img src="https://markets-rails.s3.amazonaws.com/cache/1e08c15a9c93f2c6ea5eaa062b7f0d3d.png" style="max-width:100%;"><img src="https://markets-rails.s3.amazonaws.com/cache/230bce4c6505d2c67f6fe7109420bd64.png" style="max-width:100%;"><img src="https://markets-rails.s3.amazonaws.com/cache/b95943537d939d3336d88cff579a6090.png" style="max-width:100%;"></p>
+<h6>Temperature</h6>
+<p>Usually the temperature of the warm edge light should be about half of the temperature of the main light, hence the <i>warm</i> effect.</p>
+<h6>Softness</h6>
+<p>A factor of the main light's softness. Usually the warm edge light should be much softer than the main light, giving it it's glowy appearance.</p>
+<h5 style="color:rgb(232, 230, 227);">Projection</h5>
+<p style="">Controls for the cast shadow effect are here:</p>
+<h6 style="color:rgb(232, 230, 227);">Strength</h6>
+<p style="">The strength of the cast shadow pattern. A strength of 0.0 will completely turn the shadow effect off and look as a regular light in Blender. A strength lower than 1.0 will make the shadow effect more subtle.</p>
+<h6 style="color:rgb(232, 230, 227);">Softness</h6>
+<p style="">The softness of the cast shadow pattern. The higher the softness the more blurred out the shadows will be, the lower the softness the sharper the shadows will be.</p>
+<h6 style="color:rgb(232, 230, 227);">Rotate</h6>
+<p style="">A convenient control to easily rotate the shadow effect without having to manually rotate the lamp.</p>
+<h6 style="color:rgb(232, 230, 227);">Scale</h6>
+<p style="">Allows to zoom in the shadow pattern in order to make it bigger.</p>
+<h6 style="color:rgb(232, 230, 227);">Offset</h6>
+<p style="">Allows to shift the shadow pattern to find the pattern area that best suits your needs</p>
+<h6 style="color:rgb(232, 230, 227);">Hue</h6>
+<p style="">Shifts the hue of the shadow, for example allowing to turn a green tinted shadow into a red tinted shadow.</p>
+<h6 style="color:rgb(232, 230, 227);">Saturation</h6>
+<p style="">A saturation of 0.0 will give a completely gray shadow, a higher saturation will tint the shadow with the original colors, for example to simulate the effect of translucency in foliage.</p>
+<h6 style="color:rgb(232, 230, 227);">Brightness</h6>
+<p style="">Controls the shadow brightness. Less bright shadows will be darker and full, while higher brightness values will make for lighter, subtle and softer details.</p>
+<h6 style="color:rgb(232, 230, 227);">Contrast</h6>
+<p style="">Controls the shadow contrast. Less contrasted shadows will be more subtle and smooth, while higher contrast values will step between fully lit and fully shadowed areas quite sharply.</p>
+<h5>Clip</h5>
+<p>Natural Lighting is based on movie clips that we've carefully recorded and curated to be suitable for the use of lighting.</p>
+<h6>Length</h6>
+<p>Let's you know the total available length of the clip in frames</p>
+<p>Frame Offset</p>
+<p>Allows your to offset the clip to select a different starting point.</p>

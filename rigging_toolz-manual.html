@@ -1,0 +1,230 @@
+<h1><span class="selected">Pataz Rigging Toolz</span></h1>
+<p><span class="selected">Welcome to the manual for Pataz Rigging Toolz! This guide will walk you through every feature of the addon, designed to solve the most common frustrations in the character creation pipeline so you can focus on creativity, not repetitive technical tasks.</span></p>
+<p><span class="selected">All tools are conveniently located in the </span><strong>Rigging Tab</strong><span class="selected"> in the 3D Viewport's sidebar (press the </span><code>N</code><span class="selected"> key to toggle visibility). The panels are context-aware and will only appear when a relevant object is selected.</span></p>
+<h3><span class="selected">What is a "Character"?</span></h3>
+<p><span class="selected">Before we dive in, let's clarify what the addon considers a "character." For the Pataz Rigging Toolz panels to appear, your selected object must be associated with an armature rig in one of the following ways:</span></p>
+<ul>
+
+<li><p><span class="selected">It is an </span><strong>Armature</strong><span class="selected"> object itself.</span></p>
+</li>
+
+<li><p><span class="selected">It is directly </span><strong>parented</strong><span class="selected"> to an Armature.</span></p>
+</li>
+
+<li><p><span class="selected">It has an </span><strong>Armature Modifier</strong><span class="selected"> (for meshes, curves, etc.) or a </span><strong>Grease Pencil Armature Modifier</strong><span class="selected"> that links it to a rig.</span></p>
+</li>
+
+</ul>
+<p><span class="selected">If the panels aren't showing up, this is the first thing to check! Make sure your meshes and other objects are correctly linked to your character's rig.</span></p>
+<h2><span class="selected">The Non-Destructive Rigify Workflow</span></h2>
+<p><span class="selected">This is the core of the addon—a workflow that lets you rig without fear. Standard Rigify is destructive; any custom constraints, drivers, or tweaks made </span><strong>to a generated rig</strong><span class="selected"> are permanently lost if you need to regenerate. Pataz Rigging Toolz fixes this.</span></p>
+<p><span class="selected">The new workflow is simple:</span></p>
+<ol>
+
+<li><p><strong>Generate:</strong><span class="selected"> Create your rig from the metarig as usual.</span></p>
+</li>
+
+<li><p><strong>Customize:</strong><span class="selected"> Perfect your setup </span><strong>directly on the generated rig</strong><span class="selected">. Add constraints, create drivers, tweak bone shapes, and assign bone collections.</span></p>
+</li>
+
+<li><p><strong>Edit:</strong><span class="selected"> Make any necessary changes to your metarig.</span></p>
+</li>
+
+<li><p><strong>Regenerate:</strong><span class="selected"> Use the </span><code>Generate Rig</code><span class="selected"> button with the "Preserve" options enabled. The addon intelligently saves your custom work from Step 2 and reapplies it to the newly generated rig.</span></p>
+</li>
+
+</ol>
+<h3><span class="selected">Main Rigify Controls</span></h3>
+<p><span class="selected">When you select a metarig or a generated Rigify rig, this panel appears, giving you central control over the generation process.</span></p>
+<ul>
+
+<li><p><strong>Generate Rig:</strong><span class="selected"> This supercharged operator functions like the standard Rigify generator but integrates the powerful "Preserve" options. When regenerating, it saves and reapplies your custom work from the existing rig.</span></p>
+</li>
+
+<li><p><strong>Rig ⇄ Metarig:</strong><span class="selected"> Instantly swap between your metarig and its generated rig. The addon handles hiding, showing, and selecting the correct armature for a seamless, one-click context switch.</span></p>
+</li>
+
+</ul>
+<h3><span class="selected">Regeneration Options: Preserve Your Work</span></h3>
+<p><span class="selected">This section is where the magic happens. Before regenerating, enable the toggles for any properties you have customized </span><strong>on the generated rig</strong><span class="selected"> to ensure they are preserved.</span></p>
+<h4><strong>Generate Options</strong></h4>
+<ul>
+
+<li><p><strong>Keep Pose:</strong><span class="selected"> Retains the character's current pose upon regeneration.</span></p>
+</li>
+
+<li><p><strong>Keep Animation:</strong><span class="selected"> Re-links the existing Action (animation data) to the new rig.</span></p>
+</li>
+
+<li><p><strong>Hide Metarig:</strong><span class="selected"> Automatically hides the metarig after generation, selecting the new rig.</span></p>
+</li>
+
+<li><p><strong>Show Deform Bones:</strong><span class="selected"> Displays the deformation bone collections after generation for immediate skinning review.</span></p>
+</li>
+
+</ul>
+<h4><strong>✅ The "Preserve" Toggles</strong></h4>
+<p><span class="selected">Enable these to save and restore specific properties that you've modified </span><strong>on the generated rig's bones</strong><span class="selected">.</span></p>
+<ul>
+
+<li><p><strong>Transform Locks:</strong><span class="selected"> Keeps the transform channel locks you've set.</span></p>
+</li>
+
+<li><p><strong>Rotation Mode:</strong><span class="selected"> Retains any per-bone rotation mode changes.</span></p>
+</li>
+
+<li><p><strong>Bendy Bones:</strong><span class="selected"> Preserves all Bendy Bone settings configured on the generated rig.</span></p>
+</li>
+
+<li><p><strong>Relations:</strong><span class="selected"> Restores parenting, </span><code>Inherit Scale</code><span class="selected">, and other relation properties.</span></p>
+</li>
+
+<li><p><strong>Bone Collections:</strong><span class="selected"> Keeps your custom bone collection assignments.</span></p>
+</li>
+
+<li><p><strong>Inverse Kinematics:</strong><span class="selected"> Reapplies custom IK settings from the generated bones.</span></p>
+</li>
+
+<li><p><strong>Deform:</strong><span class="selected"> Retains the </span><code>Deform</code><span class="selected"> property on bones, ensuring skinning is unaffected.</span></p>
+</li>
+
+<li><p><strong>Viewport Display:</strong><span class="selected"> Keeps bone visibility, colors, and display settings.</span></p>
+</li>
+
+<li><p><strong>Custom Shape:</strong><span class="selected"> Saves custom bone shapes and their transforms.</span></p>
+</li>
+
+<li><p><strong>Bone Constraints:</strong><span class="selected"> </span><strong>The powerhouse feature.</strong><span class="selected"> Preserves the entire constraint stack on each bone. Add, edit, or reorder constraints on the generated rig, and your setup will be perfectly rebuilt.</span></p>
+</li>
+
+<li><p><strong>Custom Properties:</strong><span class="selected"> Restores any custom properties and their drivers that you've added directly to the generated rig's bones.</span></p>
+</li>
+
+</ul>
+<h2><span class="selected">Rigging Utilities &amp; Workflow Tools</span></h2>
+<p><span class="selected">Once your rig is generated, this panel becomes your daily driver for managing the rig, preparing for animation, and fixing common issues.</span></p>
+<ul>
+
+<li><p><strong>Clear Pose:</strong><span class="selected"> Instantly snaps the character to its rest pose. Use the checkboxes to protect specific bone layers (DEF, MCH, ORG) from being reset.</span></p>
+</li>
+
+<li><p><strong>Toggle Modifiers:</strong><span class="selected"> A massive performance booster! Instantly toggle the viewport visibility of heavy modifiers (Subdivision, Cloth, etc.) across all meshes associated with your rig.</span></p>
+</li>
+
+<li><p><strong>Show Deform / Solo Deform Bones:</strong><span class="selected"> Quickly toggle the visibility of your deformation bones. "Solo Deform" hides all other controls, isolating the skinning skeleton for review.</span></p>
+</li>
+
+<li><p><strong>Set Rotation Mode:</strong><span class="selected"> Batch-change the rotation mode for every bone in the rig at once.</span></p>
+</li>
+
+<li><p><strong>Reset Constraint Distances:</strong><span class="selected"> Fixes stretched limbs by resetting the </span><code>rest_length</code><span class="selected"> on 'Stretch To' and 'Limit Distance' constraints.</span></p>
+</li>
+
+<li><p><strong>Set BBones Scale:</strong><span class="selected"> Tame your B-Bones with a single slider to control their display thickness throughout the rig.</span></p>
+</li>
+
+<li>
+<p><strong>Edit Custom Shape:</strong><span class="selected"> A huge workflow accelerator. In Pose Mode, select a bone and click this button to instantly enter Edit Mode for its custom shape. Click it again to return to posing. Supports editing multiple custom shapes at once!</span></p>
+
+<p><img src="https://assets.superhivemarket.com/cache/2a67460635244e724fd427b5d08904d7.gif" style="max-width:100%;width:75%;"><br></p>
+
+</li>
+
+</ul>
+<h2><span class="selected">Weighting Tools: Master Your Skinning Workflow 🎨</span></h2>
+<p><span class="selected">A focused toolset to make the tedious process of weight painting faster and more intuitive.</span></p>
+<ul>
+
+<li>
+<p><strong>Toggle Weight Paint:</strong><span class="selected"> Your one-button setup for the perfect skinning environment. It can automatically:</span></p>
+
+<ul>
+
+<li><p><span class="selected">Enable armature X-Ray for clear visibility.</span></p>
+</li>
+
+<li><p><span class="selected">Display the mesh wireframe over solid faces.</span></p>
+</li>
+
+<li><p><span class="selected">Show or solo the deformation bones.</span></p>
+</li>
+
+<li><p><span class="selected">Isolate the rig and mesh from the scene (</span><code>Local View</code><span class="selected">).</span></p>
+</li>
+
+<li><p><span class="selected">Set the rig to its rest position for accurate painting.</span></p>
+</li>
+
+<li><p><em>Toggling it off cleanly reverts all settings.</em></p>
+</li>
+
+</ul>
+
+</li>
+
+<li>
+<p><strong>Transfer Vertex Groups:</strong><span class="selected"> Copy weights from your active mesh to other selected meshes (like clothing). The </span><code>Transfer Mode</code><span class="selected"> gives you full control:</span></p>
+
+<ul>
+
+<li><p><strong>Auto:</strong><span class="selected"> The smartest choice. It attempts a perfect copy using topology and falls back to projection if the meshes are different.</span></p>
+</li>
+
+<li><p><strong>Topology:</strong><span class="selected"> For exact copies between identical mesh structures.</span></p>
+</li>
+
+<li><p><strong>Interpolated:</strong><span class="selected"> For projecting weights between different meshes.</span></p>
+</li>
+
+</ul>
+
+</li>
+
+<li><p><strong>Merge Vertex Groups:</strong><span class="selected"> Combine weight groups to clean up your skinning. In Pose Mode, select the bones to merge from, then select the target bone last (making it active). This tool merges their weights into the active bone's group and removes the old groups.</span></p>
+</li>
+
+<li>
+<p><strong>Clean Vertex Groups:</strong><span class="selected"> A bundle of cleanup tools for optimizing weights:</span></p>
+
+<ul>
+
+<li><p><strong>Normalize Weights:</strong><span class="selected"> Ensures all influences on a vertex add up to 1.0.</span></p>
+</li>
+
+<li><p><strong>Remove Zero Weights:</strong><span class="selected"> Cleans groups by removing vertices with no influence.</span></p>
+</li>
+
+<li><p><strong>Remove Unused Groups:</strong><span class="selected"> Deletes empty vertex groups that clutter your list.</span></p>
+</li>
+
+<li><p><strong>Limit Total:</strong><span class="selected"> Crucial for game engines! Limits how many bones can influence a single vertex.</span></p>
+</li>
+
+</ul>
+
+</li>
+
+</ul>
+<h2><span class="selected">Cleanup Crew: Keep Your Scenes Tidy 🧹</span></h2>
+<p><span class="selected">This panel is your toolkit for decluttering and optimizing models. Bad or orphaned data can increase file sizes and cause export errors. These one-click operators safely remove it from all selected objects.</span></p>
+<ul>
+
+<li><p><strong>Clear Vertex Groups:</strong><span class="selected"> Deletes all vertex groups.</span></p>
+</li>
+
+<li><p><strong>Clear/Apply Shape Keys:</strong><span class="selected"> Removes all shape keys. The </span><code>Apply</code><span class="selected"> version bakes the current mix into the base mesh.</span></p>
+</li>
+
+<li><p><strong>Clear UV Maps:</strong><span class="selected"> Deletes all UV layers.</span></p>
+</li>
+
+<li><p><strong>Clear Color Attributes:</strong><span class="selected"> Removes all vertex color data.</span></p>
+</li>
+
+<li><p><strong>And more...</strong><span class="selected"> Includes quick fixes for clearing custom normals, sculpt masks, skin data, and other temporary data layers.</span></p>
+</li>
+
+<li><p><strong>Lock Transforms:</strong><span class="selected"> Protects objects from being accidentally moved, rotated, or scaled.</span></p>
+</li>
+
+</ul>

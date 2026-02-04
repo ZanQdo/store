@@ -1,0 +1,216 @@
+<h1>File Wrangler - User Manual</h1>
+<p></p>
+<p></p>
+<h2>1. Introduction</h2>
+<p></p>
+<p>Welcome to <b>File Wrangler</b>! This Blender addon is a powerful batch processing tool designed to automate repetitive tasks across multiple <code>.blend</code> files. Whether you need to clean up entire project directories, change file settings, or run custom scripts, File Wrangler saves you hours of manual work by handling it all in one go.</p>
+<p>The core philosophy is to set up a series of actions, apply filters to target specific files, and execute the process safely and efficiently.</p>
+<hr>
+<p></p>
+<h2>2. Installation</h2>
+<p></p>
+<ol>
+
+<li><p>Download the <code>file_wrangler.zip</code> file.</p>
+</li>
+
+<li><p>In Blender, go to <b>Edit &gt; Preferences &gt; Add-ons</b>.</p>
+</li>
+
+<li><p>Click the <b>Install...</b> button at the top-right.</p>
+</li>
+
+<li><p>Navigate to and select the downloaded <code>.zip</code> file.</p>
+</li>
+
+<li><p>Enable the addon by ticking the checkbox next to its name.</p>
+</li>
+
+</ol>
+<p>The addon panel will appear in the <b>3D View's Sidebar</b> (press the <code>N</code> key) under the "File Wrangler" tab.</p>
+<hr>
+<p></p>
+<h2>3. The File Wrangler Interface</h2>
+<p></p>
+<p>You can find the File Wrangler panel in the 3D Viewport. Press the <code>N</code> key to open the sidebar, and look for a tab named "<b>File Wrangler</b>".</p>
+<p>The panel is organized into three main sections: <b>Setup &amp; I/O</b>, <b>Filename Filters</b>, and <b>Actions</b>.</p>
+<hr>
+<p></p>
+<h2>4. Step-by-Step Guide</h2>
+<p></p>
+<p></p>
+<h3>Section 1: Setup &amp; I/O</h3>
+<p></p>
+<p>This section defines <b>what</b> files to process and <b>where</b> to save them.</p>
+<ul>
+
+<li><p><b>Source Directory</b>: This is the most important setting. Select the main folder containing the <code>.blend</code> files you want to process.</p>
+</li>
+
+<li>
+<p><b>Output Directory (Optional but Recommended)</b>:</p>
+
+<ul>
+
+<li><p>If you set an Output Directory: File Wrangler will copy the original folder structure from your Source Directory into the Output Directory and save all modified files there. <b>This is the safest, non-destructive way to work.</b></p>
+</li>
+
+<li><p>If you leave this blank: File Wrangler will <b>overwrite your original files</b> in the Source Directory. Use this with extreme caution.</p>
+</li>
+
+</ul>
+
+</li>
+
+<li><p><b>Search Recursively</b>: When enabled, File Wrangler will search for <code>.blend</code> files inside all subfolders of your Source Directory. When disabled, it will only look in the top level.</p>
+</li>
+
+<li><p><b>Write Log File</b>: If enabled, a detailed text file named <code>file_wrangler_log.txt</code> will be created. The log records every action taken, every file processed, and any errors that occurred.</p>
+</li>
+
+</ul>
+<p></p>
+<h3>Section 2: Filename Filters</h3>
+<p></p>
+<p>Filters allow you to precisely target files within your Source Directory. This is useful for processing only characters, environments, or files from a specific shot.</p>
+<ul>
+
+<li><p><b>Include files containing</b>: Enable this to process <b>only</b> the files whose names contain the specified keywords. You can list multiple keywords separated by commas (e.g., <code>character, prop, car</code>).</p>
+</li>
+
+<li><p><b>Exclude files containing</b>: Enable this to <b>skip</b> any files whose names contain the specified keywords. This is useful for avoiding test files or assets you don't want to change (e.g., <code>test, old, broken</code>).</p>
+</li>
+
+</ul>
+<p></p>
+<h3>Section 3: Actions</h3>
+<p></p>
+<p>Here you choose what operations to perform on the targeted <code>.blend</code> files. You can enable multiple actions at once.</p>
+<ul>
+
+<li><p><b>Delete Backup Files (.blend1)</b>: This action scans the Source Directory (recursively, if enabled) and deletes all Blender backup files (e.g., <code>my_file.blend1</code>, <code>my_file.blend2</code>). This is a great way to clean up project folders. This action runs independently of the main file processing loop.</p>
+</li>
+
+<li><p><b>Purge Unused Data</b>: For each <code>.blend</code> file, this will perform a recursive "Orphans Purge," which removes unused data-blocks like materials, textures, and node groups that are not assigned to any object. This helps reduce file size and clutter.</p>
+</li>
+
+<li>
+<p><b>Find Missing Files</b>: This action attempts to automatically locate and relink missing external files (like image textures).</p>
+
+<ul>
+<li><p><b>Search Path</b>: You can specify a folder where File Wrangler should look for these missing files. If you leave it blank, it will default to searching within your main <b>Source Directory</b>.</p>
+</li>
+</ul>
+
+</li>
+
+<li>
+<p><b>Run Custom Script</b>: A powerful feature for advanced users. This allows you to run your own Python script on every <code>.blend</code> file.</p>
+
+<ul>
+
+<li>
+<p><b>Script Source</b>: You can choose where the script comes from:</p>
+
+<ul>
+
+<li><p><b>External File</b>: Lets you select a <code>.py</code> script from your computer.</p>
+</li>
+
+<li><p><b>Internal Text</b>: Lets you select a script from Blender's internal Text Editor. This is useful for scripts that are part of your project.</p>
+</li>
+
+</ul>
+
+</li>
+
+<li><p>Inside the script, you have access to the <code>bpy</code> and <code>os</code> modules to perform almost any operation.</p>
+</li>
+
+</ul>
+
+</li>
+
+<li>
+<p><b>File Paths</b>: This action changes how paths to external files are stored within the <code>.blend</code> file.</p>
+
+<ul>
+
+<li><p><b>Don't Change</b>: Leaves paths as they are.</p>
+</li>
+
+<li><p><b>Relative</b>: Makes all paths relative to the location of the <code>.blend</code> file. Good for portable projects.</p>
+</li>
+
+<li><p><b>Absolute</b>: Makes all paths absolute (e.g., <code>C:\Users\You\Desktop\...</code>). Good for studios with fixed file structures.</p>
+</li>
+
+</ul>
+
+</li>
+
+<li>
+<p><b>File Compression</b>: This changes the compression setting of the <code>.blend</code> file itself.</p>
+
+<ul>
+
+<li><p><b>Don't Change</b>: Leaves the compression setting as it is.</p>
+</li>
+
+<li><p><b>Compress</b>: Saves the file with compression enabled, resulting in a smaller file size.</p>
+</li>
+
+<li><p><b>Decompress</b>: Saves the file without compression. Files will be larger but may open slightly faster.</p>
+</li>
+
+</ul>
+
+</li>
+
+</ul>
+<hr>
+<p></p>
+<h2>5. Executing the Process</h2>
+<p></p>
+<p>Once you have your settings, filters, and actions configured, you have two options at the bottom of the panel:</p>
+<ul>
+
+<li><p><b>Dry Run</b>: This is a safe preview. It will scan your directories and apply your filters, then print a list of all the files that <b>would be</b> processed to the Blender System Console (and the log file, if enabled). <b>It will not make any changes to your files.</b> Always use this first to ensure you're targeting the correct files.</p>
+</li>
+
+<li><p><b>Start Batch Process</b>: This begins the operation. A progress bar will appear at the top of the File Wrangler panel showing the current status. While running, a <b>Cancel Process</b> button will be available to safely stop the process after it finishes the current file.</p>
+</li>
+
+</ul>
+<p></p>
+<h3>⚠️ Important Warnings</h3>
+<p></p>
+<ul>
+
+<li><p><b>ALWAYS BACK UP YOUR DATA</b> before running a batch process, especially if you are not using a separate <b>Output Directory</b>.</p>
+</li>
+
+<li><p>Actions like "Delete Backup Files" and overwriting files are permanent. Double-check your settings.</p>
+</li>
+
+<li><p>Using a separate <b>Output Directory</b> is the recommended workflow for safety.</p>
+</li>
+
+</ul>
+<hr>
+<p></p>
+<h2>6. Preferences</h2>
+<p></p>
+<p>You can customize the name of the UI tab in Blender's preferences.</p>
+<ol>
+
+<li><p>Go to <b>Edit &gt; Preferences &gt; Add-ons</b>.</p>
+</li>
+
+<li><p>Find "File Wrangler" and expand its settings by clicking the small arrow.</p>
+</li>
+
+<li><p>You can change the text in the <b>UI Tab Name</b> field. The change will take effect immediately.</p>
+</li>
+
+</ol>

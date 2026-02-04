@@ -1,0 +1,43 @@
+<p><span style="font-size:18px;"><strong>Video Tutorials</strong></span></p>
+<p>Automaton Vehicle Basic Introductory Tutorial</p>
+<p></p>
+<div class="ratio ratio-16x9"><iframe width="640" height="360" src="https://www.youtube.com/embed/B8mxDAKrfOM?wmode=opaque" frameborder="0" allowfullscreen="" class="fr-draggable"></iframe></div>
+<p>Automaton Vehicle Intermediate Setup Tutorial</p>
+<p></p>
+<div class="ratio ratio-16x9"><iframe width="640" height="360" src="https://www.youtube.com/embed/8qJgrFROcpU?wmode=opaque" frameborder="0" allowfullscreen="" class="fr-draggable"></iframe></div>
+<p>Automaton Vehicle Advanced Features Tutorial</p>
+<p></p>
+<div class="ratio ratio-16x9"><iframe width="640" height="360" src="https://www.youtube.com/embed/VhhyrC0OMaE?wmode=opaque" frameborder="0" allowfullscreen="" class="fr-draggable"></iframe></div>
+<p>Automaton Vehicle Adding Brake Calipers</p>
+<p></p>
+<div class="ratio ratio-16x9"><iframe width="640" height="360" src="https://www.youtube.com/embed/0tk4An5YxdE?wmode=opaque" frameborder="0" allowfullscreen="" class="fr-draggable"></iframe></div>
+<p><strong><span style="font-size:18px;">How to use</span></strong></p>
+<p><strong>Preparing your model</strong></p>
+<p>Try and use correct dimensions for your vehicle. I like to quickly google the dimensions of my type of vehicle.</p>
+<p><img src="https://s3.amazonaws.com/markets-rails/uploads%2F1594772426335-dimensions.png" style="width:400px;" class="fr-fic fr-dib"></p>
+<p>Set your vehicle orientation so that it follows the Blender standard of pointing in the -Y direction. That is: if you are in front view, the vehicle should point to you.</p>
+<p><img src="https://s3.amazonaws.com/markets-rails/uploads%2F1594772484047-front_view.png" style="width:400px;" class="fr-fic fr-dib"></p>
+<p>Position the vehicle so that the wheelbase is centered. That is: the distance between the front wheels to the scene origin is the same as the distance between the back wheels and the scene origin.</p>
+<p><img src="https://s3.amazonaws.com/markets-rails/uploads%2F1594772515132-wheelbase_centering.png" style="width:400px;" class="fr-fic fr-dib"></p>
+<p>Separate all moving parts. The body and each wheel should be different objects. Do not parent between objects. It is also a good idea to apply rotation and scale in your objects.</p>
+<p><img src="https://s3.amazonaws.com/markets-rails/uploads%2F1594772545213-separate_objects.png" style="width:400px;" class="fr-fic fr-dib"></p>
+<p>Set the wheel origins to the center of rotation.</p>
+<p><img src="https://s3.amazonaws.com/markets-rails/uploads%2F1594772634353-spin_origin.gif" style="width:400px;" class="fr-fic fr-dib"></p>
+<p>If the wheel steers, set the origin to the center of the steering angle. This is usually a little bit on the inner side of the vehicle. What ever rotation you add here will be preserved so be sure to leave everything in the correct default position!</p>
+<p><img src="https://s3.amazonaws.com/markets-rails/uploads%2F1594772647539-steer_origin.gif" style="width:400px;" class="fr-fic fr-dib"></p>
+<p><strong>Creating the Automaton!</strong></p>
+<p>Start by selecting all moving objects, go to the Automaton tab and enable Automaton:Vehicle. Finally press Create Automaton.</p>
+<p><img src="https://s3.amazonaws.com/markets-rails/uploads%2F1594772701727-activate_automaton.png" style="width:400px;" class="fr-fic fr-dib"></p>
+<p><strong>General Settings</strong></p>
+<p>You will be presented with the General Settings where we will set a Path and an optional Terrain object. Use the buttons at the right of the selectors to create new path and terrain objects!</p>
+<p><img src="https://s3.amazonaws.com/markets-rails/uploads%2F1594772737961-create_path_terrain.gif" style="width:400px;" class="fr-fic fr-dib"></p>
+<p><strong>Object settings</strong></p>
+<p>Now we choose how each of the objects will be moving! There are 4 possible animation effects: Translate, Spin, Suspension and Steer.</p>
+<p>Let's start by selecting the body object and activating Translate. It will look a little wonky for now but... have you ever seen a car riding without wheels? (:</p>
+<p><img src="https://s3.amazonaws.com/markets-rails/uploads%2F1594772761803-body_translate.png" style="width:400px;" class="fr-fic fr-dib"></p>
+<p>Now select one of the back wheels and activate Translate, Spin and Suspension. Do the same for the other back wheel.</p>
+<p><img src="https://s3.amazonaws.com/markets-rails/uploads%2F1594772780617-back_wheels.png" style="width:400px;" class="fr-fic fr-dib"></p>
+<p>Select one of the front wheels and activate <em>Translate</em>, <em>Spin</em>, <em>Suspension</em> and <em>Steer</em>. Do the same for the other front wheel.</p>
+<p><img src="https://s3.amazonaws.com/markets-rails/uploads%2F1594772828390-front_wheels.png" style="width:400px;" class="fr-fic fr-dib"></p>
+<p>You are done! Now play with the Animation control to see your vehicle rally over the bumpy terrain!</p>
+<p><img src="https://s3.amazonaws.com/markets-rails/uploads%2F1594772874145-animation.gif" style="width:400px;" class="fr-fic fr-dib"></p>
