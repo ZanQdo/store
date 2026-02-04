@@ -1,43 +1,161 @@
-<p><span style="font-size:18px;"><strong>Video Tutorials</strong></span></p>
-<p>Automaton Vehicle Basic Introductory Tutorial</p>
-<p></p>
-<div class="ratio ratio-16x9"><iframe width="640" height="360" src="https://www.youtube.com/embed/B8mxDAKrfOM?wmode=opaque" frameborder="0" allowfullscreen="" class="fr-draggable"></iframe></div>
-<p>Automaton Vehicle Intermediate Setup Tutorial</p>
-<p></p>
-<div class="ratio ratio-16x9"><iframe width="640" height="360" src="https://www.youtube.com/embed/8qJgrFROcpU?wmode=opaque" frameborder="0" allowfullscreen="" class="fr-draggable"></iframe></div>
-<p>Automaton Vehicle Advanced Features Tutorial</p>
-<p></p>
-<div class="ratio ratio-16x9"><iframe width="640" height="360" src="https://www.youtube.com/embed/VhhyrC0OMaE?wmode=opaque" frameborder="0" allowfullscreen="" class="fr-draggable"></iframe></div>
-<p>Automaton Vehicle Adding Brake Calipers</p>
-<p></p>
-<div class="ratio ratio-16x9"><iframe width="640" height="360" src="https://www.youtube.com/embed/0tk4An5YxdE?wmode=opaque" frameborder="0" allowfullscreen="" class="fr-draggable"></iframe></div>
-<p><strong><span style="font-size:18px;">How to use</span></strong></p>
-<p><strong>Preparing your model</strong></p>
-<p>Try and use correct dimensions for your vehicle. I like to quickly google the dimensions of my type of vehicle.</p>
-<p><img src="https://s3.amazonaws.com/markets-rails/uploads%2F1594772426335-dimensions.png" style="width:400px;" class="fr-fic fr-dib"></p>
-<p>Set your vehicle orientation so that it follows the Blender standard of pointing in the -Y direction. That is: if you are in front view, the vehicle should point to you.</p>
-<p><img src="https://s3.amazonaws.com/markets-rails/uploads%2F1594772484047-front_view.png" style="width:400px;" class="fr-fic fr-dib"></p>
-<p>Position the vehicle so that the wheelbase is centered. That is: the distance between the front wheels to the scene origin is the same as the distance between the back wheels and the scene origin.</p>
-<p><img src="https://s3.amazonaws.com/markets-rails/uploads%2F1594772515132-wheelbase_centering.png" style="width:400px;" class="fr-fic fr-dib"></p>
-<p>Separate all moving parts. The body and each wheel should be different objects. Do not parent between objects. It is also a good idea to apply rotation and scale in your objects.</p>
-<p><img src="https://s3.amazonaws.com/markets-rails/uploads%2F1594772545213-separate_objects.png" style="width:400px;" class="fr-fic fr-dib"></p>
-<p>Set the wheel origins to the center of rotation.</p>
-<p><img src="https://s3.amazonaws.com/markets-rails/uploads%2F1594772634353-spin_origin.gif" style="width:400px;" class="fr-fic fr-dib"></p>
-<p>If the wheel steers, set the origin to the center of the steering angle. This is usually a little bit on the inner side of the vehicle. What ever rotation you add here will be preserved so be sure to leave everything in the correct default position!</p>
-<p><img src="https://s3.amazonaws.com/markets-rails/uploads%2F1594772647539-steer_origin.gif" style="width:400px;" class="fr-fic fr-dib"></p>
-<p><strong>Creating the Automaton!</strong></p>
-<p>Start by selecting all moving objects, go to the Automaton tab and enable Automaton:Vehicle. Finally press Create Automaton.</p>
-<p><img src="https://s3.amazonaws.com/markets-rails/uploads%2F1594772701727-activate_automaton.png" style="width:400px;" class="fr-fic fr-dib"></p>
-<p><strong>General Settings</strong></p>
-<p>You will be presented with the General Settings where we will set a Path and an optional Terrain object. Use the buttons at the right of the selectors to create new path and terrain objects!</p>
-<p><img src="https://s3.amazonaws.com/markets-rails/uploads%2F1594772737961-create_path_terrain.gif" style="width:400px;" class="fr-fic fr-dib"></p>
-<p><strong>Object settings</strong></p>
-<p>Now we choose how each of the objects will be moving! There are 4 possible animation effects: Translate, Spin, Suspension and Steer.</p>
-<p>Let's start by selecting the body object and activating Translate. It will look a little wonky for now but... have you ever seen a car riding without wheels? (:</p>
-<p><img src="https://s3.amazonaws.com/markets-rails/uploads%2F1594772761803-body_translate.png" style="width:400px;" class="fr-fic fr-dib"></p>
-<p>Now select one of the back wheels and activate Translate, Spin and Suspension. Do the same for the other back wheel.</p>
-<p><img src="https://s3.amazonaws.com/markets-rails/uploads%2F1594772780617-back_wheels.png" style="width:400px;" class="fr-fic fr-dib"></p>
-<p>Select one of the front wheels and activate <em>Translate</em>, <em>Spin</em>, <em>Suspension</em> and <em>Steer</em>. Do the same for the other front wheel.</p>
-<p><img src="https://s3.amazonaws.com/markets-rails/uploads%2F1594772828390-front_wheels.png" style="width:400px;" class="fr-fic fr-dib"></p>
-<p>You are done! Now play with the Animation control to see your vehicle rally over the bumpy terrain!</p>
-<p><img src="https://s3.amazonaws.com/markets-rails/uploads%2F1594772874145-animation.gif" style="width:400px;" class="fr-fic fr-dib"></p>
+<div style="font-family:'Inter', Helvetica, Arial, sans-serif; background-color:#ffffff; color:#475569; padding:0; margin:0; line-height:1.6; -webkit-font-smoothing: antialiased;">
+    <div style="max-width:720px; margin:0 auto; padding:40px 20px;">
+        
+        <!-- Header -->
+        <div style="border-bottom:1px solid #e2e8f0; padding-bottom:24px; margin-bottom:40px;">
+            <h1 style="font-weight:800; color:#0f172a; margin:0 0 8px 0; letter-spacing:-1px; font-size:32px;">
+                Automaton Vehicle <span style="color:#3b82f6; font-weight:300;">User Manual</span>
+            </h1>
+            <p style="margin:0; color:#64748b; font-size:14px;">Advanced Vehicle Rigging &amp; Animation System</p>
+        </div>
+
+        <!-- 1. Video Tutorials -->
+        <div style="margin-bottom:40px;">
+            <h2 style="font-size:20px; font-weight:700; color:#1e293b; margin-bottom:16px; display:flex; align-items:center;">
+                <span style="background:#eff6ff; color:#3b82f6; font-size:12px; padding:4px 8px; border-radius:6px; margin-right:12px;">01</span> Video Tutorials
+            </h2>
+            <p style="margin-bottom:24px;">Follow these guides to master the Automaton workflow.</p>
+            
+            <div style="display:grid; grid-template-columns: 1fr 1fr; gap:20px;">
+                <div>
+                    <strong style="display:block; font-size:14px; margin-bottom:8px; color:#0f172a;">Basic Introduction</strong>
+                    <div style="position:relative; padding-bottom:56.25%; height:0; overflow:hidden; border-radius:8px; box-shadow:0 2px 4px rgba(0,0,0,0.1);">
+                        <iframe style="position:absolute; top:0; left:0; width:100%; height:100%; border:0;" src="https://www.youtube.com/embed/B8mxDAKrfOM" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div>
+                    <strong style="display:block; font-size:14px; margin-bottom:8px; color:#0f172a;">Intermediate Setup</strong>
+                    <div style="position:relative; padding-bottom:56.25%; height:0; overflow:hidden; border-radius:8px; box-shadow:0 2px 4px rgba(0,0,0,0.1);">
+                        <iframe style="position:absolute; top:0; left:0; width:100%; height:100%; border:0;" src="https://www.youtube.com/embed/8qJgrFROcpU" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div>
+                    <strong style="display:block; font-size:14px; margin-bottom:8px; color:#0f172a;">Advanced Features</strong>
+                    <div style="position:relative; padding-bottom:56.25%; height:0; overflow:hidden; border-radius:8px; box-shadow:0 2px 4px rgba(0,0,0,0.1);">
+                        <iframe style="position:absolute; top:0; left:0; width:100%; height:100%; border:0;" src="https://www.youtube.com/embed/VhhyrC0OMaE" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div>
+                    <strong style="display:block; font-size:14px; margin-bottom:8px; color:#0f172a;">Adding Brake Calipers</strong>
+                    <div style="position:relative; padding-bottom:56.25%; height:0; overflow:hidden; border-radius:8px; box-shadow:0 2px 4px rgba(0,0,0,0.1);">
+                        <iframe style="position:absolute; top:0; left:0; width:100%; height:100%; border:0;" src="https://www.youtube.com/embed/0tk4An5YxdE" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 2. Preparing Your Model -->
+        <div style="margin-bottom:40px;">
+            <h2 style="font-size:20px; font-weight:700; color:#1e293b; margin-bottom:16px; display:flex; align-items:center;">
+                <span style="background:#eff6ff; color:#3b82f6; font-size:12px; padding:4px 8px; border-radius:6px; margin-right:12px;">02</span> Preparing Your Model
+            </h2>
+            <p style="margin-bottom:24px;">Proper setup is crucial for the simulation to work correctly.</p>
+
+            <div style="margin-bottom:24px;">
+                <h3 style="font-size:16px; font-weight:600; color:#0f172a; margin-bottom:12px; padding-bottom:8px; border-bottom:1px solid #f1f5f9;">2.1 Dimensions &amp; Orientation</h3>
+                <ul style="font-size:14px; padding-left:20px; color:#334155; margin-bottom:16px;">
+                    <li style="margin-bottom:8px;"><strong>Real World Scale:</strong> Use correct real-world dimensions for your vehicle type.</li>
+                    <li><strong>Orientation:</strong> Point the vehicle in the <strong>-Y direction</strong> (facing you in Front View).</li>
+                </ul>
+                <div style="display:grid; grid-template-columns: 1fr 1fr; gap:12px;">
+                    <img src="https://s3.amazonaws.com/markets-rails/uploads%2F1594772426335-dimensions.png" style="width:100%; border-radius:6px; border:1px solid #e2e8f0;">
+                    <img src="https://s3.amazonaws.com/markets-rails/uploads%2F1594772484047-front_view.png" style="width:100%; border-radius:6px; border:1px solid #e2e8f0;">
+                </div>
+            </div>
+
+            <div style="margin-bottom:24px;">
+                <h3 style="font-size:16px; font-weight:600; color:#0f172a; margin-bottom:12px; padding-bottom:8px; border-bottom:1px solid #f1f5f9;">2.2 Centering &amp; Separation</h3>
+                <p style="font-size:14px; margin-bottom:12px;">Position the vehicle so the wheelbase is centered (equal distance from origin to front/back wheels).</p>
+                <img src="https://s3.amazonaws.com/markets-rails/uploads%2F1594772515132-wheelbase_centering.png" style="width:100%; border-radius:6px; border:1px solid #e2e8f0; margin-bottom:16px;">
+                
+                <div style="background-color:#f8fafc; border:1px solid #e2e8f0; border-radius:8px; padding:16px;">
+                    <strong style="color:#0f172a; font-size:14px;">Separation Rules:</strong>
+                    <ul style="font-size:14px; padding-left:20px; color:#334155; margin-bottom:0; margin-top:8px;">
+                        <li style="margin-bottom:4px;">Separate all moving parts (Body and Wheels must be different objects).</li>
+                        <li style="margin-bottom:4px;"><strong>Do not parent</strong> objects to each other.</li>
+                        <li><strong>Apply Rotation &amp; Scale</strong> (Ctrl+A) on all objects.</li>
+                    </ul>
+                </div>
+                <img src="https://s3.amazonaws.com/markets-rails/uploads%2F1594772545213-separate_objects.png" style="width:100%; border-radius:6px; border:1px solid #e2e8f0; margin-top:12px;">
+            </div>
+
+            <div>
+                <h3 style="font-size:16px; font-weight:600; color:#0f172a; margin-bottom:12px; padding-bottom:8px; border-bottom:1px solid #f1f5f9;">2.3 Origin Points</h3>
+                <div style="display:grid; grid-template-columns: 1fr 1fr; gap:20px;">
+                    <div>
+                        <strong style="font-size:14px; color:#0f172a;">Wheel Origins</strong>
+                        <p style="font-size:13px; color:#64748b;">Set to the exact center of rotation.</p>
+                        <img src="https://s3.amazonaws.com/markets-rails/uploads%2F1594772634353-spin_origin.gif" style="width:100%; border-radius:6px; border:1px solid #e2e8f0;">
+                    </div>
+                    <div>
+                        <strong style="font-size:14px; color:#0f172a;">Steering Origins</strong>
+                        <p style="font-size:13px; color:#64748b;">Set to the pivot axis (usually slightly inward).</p>
+                        <img src="https://s3.amazonaws.com/markets-rails/uploads%2F1594772647539-steer_origin.gif" style="width:100%; border-radius:6px; border:1px solid #e2e8f0;">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3. Setup -->
+        <div style="margin-bottom:40px;">
+            <h2 style="font-size:20px; font-weight:700; color:#1e293b; margin-bottom:16px; display:flex; align-items:center;">
+                <span style="background:#eff6ff; color:#3b82f6; font-size:12px; padding:4px 8px; border-radius:6px; margin-right:12px;">03</span> Setup &amp; Initialization
+            </h2>
+            
+            <div style="margin-bottom:24px;">
+                <h3 style="font-size:16px; font-weight:600; color:#0f172a; margin-bottom:8px;">Creating the Automaton</h3>
+                <p style="font-size:14px; margin-bottom:12px;">Select all moving objects, go to the <strong>Automaton</strong> tab, enable <strong>Automaton:Vehicle</strong>, and press <strong>Create Automaton</strong>.</p>
+                <img src="https://s3.amazonaws.com/markets-rails/uploads%2F1594772701727-activate_automaton.png" style="width:100%; border-radius:6px; border:1px solid #e2e8f0;">
+            </div>
+
+            <div>
+                <h3 style="font-size:16px; font-weight:600; color:#0f172a; margin-bottom:8px;">General Settings</h3>
+                <p style="font-size:14px; margin-bottom:12px;">Set a <strong>Path</strong> and an optional <strong>Terrain</strong> object. Use the buttons next to the selectors to quickly create new ones.</p>
+                <img src="https://s3.amazonaws.com/markets-rails/uploads%2F1594772737961-create_path_terrain.gif" style="width:100%; border-radius:6px; border:1px solid #e2e8f0;">
+            </div>
+        </div>
+
+        <!-- 4. Object Configuration -->
+        <div style="margin-bottom:40px;">
+            <h2 style="font-size:20px; font-weight:700; color:#1e293b; margin-bottom:16px; display:flex; align-items:center;">
+                <span style="background:#eff6ff; color:#3b82f6; font-size:12px; padding:4px 8px; border-radius:6px; margin-right:12px;">04</span> Object Configuration
+            </h2>
+            <p style="margin-bottom:24px;">Configure the movement logic for each part of the vehicle.</p>
+
+            <div style="display:grid; grid-template-columns: 1fr; gap:24px;">
+                <div style="border:1px solid #e2e8f0; border-radius:8px; padding:20px;">
+                    <h3 style="font-size:15px; font-weight:700; color:#0f172a; margin-top:0;">Step 1: The Body</h3>
+                    <p style="font-size:14px; margin-bottom:12px;">Select the body object and activate <strong>Translate</strong>.</p>
+                    <img src="https://s3.amazonaws.com/markets-rails/uploads%2F1594772761803-body_translate.png" style="width:100%; border-radius:6px; border:1px solid #e2e8f0;">
+                </div>
+
+                <div style="border:1px solid #e2e8f0; border-radius:8px; padding:20px;">
+                    <h3 style="font-size:15px; font-weight:700; color:#0f172a; margin-top:0;">Step 2: Back Wheels</h3>
+                    <p style="font-size:14px; margin-bottom:12px;">Select each back wheel and activate <strong>Translate</strong>, <strong>Spin</strong>, and <strong>Suspension</strong>.</p>
+                    <img src="https://s3.amazonaws.com/markets-rails/uploads%2F1594772780617-back_wheels.png" style="width:100%; border-radius:6px; border:1px solid #e2e8f0;">
+                </div>
+
+                <div style="border:1px solid #e2e8f0; border-radius:8px; padding:20px;">
+                    <h3 style="font-size:15px; font-weight:700; color:#0f172a; margin-top:0;">Step 3: Front Wheels</h3>
+                    <p style="font-size:14px; margin-bottom:12px;">Select each front wheel and activate <strong>Translate</strong>, <strong>Spin</strong>, <strong>Suspension</strong>, and <strong>Steer</strong>.</p>
+                    <img src="https://s3.amazonaws.com/markets-rails/uploads%2F1594772828390-front_wheels.png" style="width:100%; border-radius:6px; border:1px solid #e2e8f0;">
+                </div>
+            </div>
+        </div>
+
+        <!-- 5. Result -->
+        <div style="margin-bottom:40px;">
+            <h2 style="font-size:20px; font-weight:700; color:#1e293b; margin-bottom:16px; display:flex; align-items:center;">
+                <span style="background:#eff6ff; color:#3b82f6; font-size:12px; padding:4px 8px; border-radius:6px; margin-right:12px;">05</span> Final Result
+            </h2>
+            <p style="margin-bottom:16px;">You are done! Play with the Animation control to see your vehicle rally over the bumpy terrain.</p>
+            <img src="https://s3.amazonaws.com/markets-rails/uploads%2F1594772874145-animation.gif" style="width:100%; border-radius:8px; border:1px solid #e2e8f0;">
+        </div>
+
+        <!-- Footer -->
+        <div style="text-align:center; padding-top:40px; border-top:1px solid #e2e8f0; color:#94a3b8; font-size:12px;">
+            <p>© blenderaddon.com</p>
+        </div>
+
+    </div>
+</div>
