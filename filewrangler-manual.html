@@ -1,3 +1,12 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Wrangler User Manual</title>
+</head>
+<body style="margin:0; padding:0; background-color:#ffffff;">
+
 <div style="font-family:'Inter', Helvetica, Arial, sans-serif; background-color:#ffffff; color:#475569; padding:0; margin:0; line-height:1.6; -webkit-font-smoothing: antialiased;">
     <div style="max-width:720px; margin:0 auto; padding:40px 20px;">
         
@@ -88,23 +97,23 @@
             </h2>
             <p style="margin-bottom:20px; font-size:14px; color:#64748b;">Choose operations to perform on the targeted files.</p>
             
-            <div style="display:grid; grid-template-columns: 1fr; gap:12px;">
-                <div style="background:#f1f5f9; padding:16px; border-radius:8px; border:1px solid #e2e8f0;">
+            <div style="display:block;">
+                <div style="background:#f8fafc; padding:16px; border-radius:8px; border:1px solid #e2e8f0; margin-bottom:12px;">
                     <strong style="color:#0f172a; display:block; margin-bottom:4px;">Delete Backup Files (.blend1)</strong>
                     <p style="font-size:13px; color:#334155; margin:0;">Scans the directory and deletes all backup files to clean up clutter. Runs independently of the main loop.</p>
                 </div>
                 
-                <div style="background:#f1f5f9; padding:16px; border-radius:8px; border:1px solid #e2e8f0;">
+                <div style="background:#f8fafc; padding:16px; border-radius:8px; border:1px solid #e2e8f0; margin-bottom:12px;">
                     <strong style="color:#0f172a; display:block; margin-bottom:4px;">Purge Unused Data</strong>
                     <p style="font-size:13px; color:#334155; margin:0;">Performs a recursive "Orphans Purge" on each file, removing unused materials, textures, and node groups.</p>
                 </div>
 
-                <div style="background:#f1f5f9; padding:16px; border-radius:8px; border:1px solid #e2e8f0;">
+                <div style="background:#f8fafc; padding:16px; border-radius:8px; border:1px solid #e2e8f0; margin-bottom:12px;">
                     <strong style="color:#0f172a; display:block; margin-bottom:4px;">Find Missing Files</strong>
                     <p style="font-size:13px; color:#334155; margin:0;">Attempts to locate and relink missing external assets. Specify a <strong>Search Path</strong> or default to the Source Directory.</p>
                 </div>
 
-                <div style="background:#f1f5f9; padding:16px; border-radius:8px; border:1px solid #e2e8f0;">
+                <div style="background:#f8fafc; padding:16px; border-radius:8px; border:1px solid #e2e8f0; margin-bottom:12px;">
                     <strong style="color:#0f172a; display:block; margin-bottom:4px;">Run Custom Script</strong>
                     <p style="font-size:13px; color:#334155; margin:0 0 8px 0;">Run a Python script on every file. Use <code>bpy</code> and <code>os</code> modules.</p>
                     <ul style="font-size:13px; color:#334155; margin:0; padding-left:16px;">
@@ -113,7 +122,7 @@
                     </ul>
                 </div>
 
-                <div style="background:#f1f5f9; padding:16px; border-radius:8px; border:1px solid #e2e8f0;">
+                <div style="background:#f8fafc; padding:16px; border-radius:8px; border:1px solid #e2e8f0;">
                     <strong style="color:#0f172a; display:block; margin-bottom:4px;">File Paths &amp; Compression</strong>
                     <ul style="font-size:13px; color:#334155; margin:0; padding-left:16px;">
                         <li style="margin-bottom:4px;"><strong>Paths:</strong> Set to <em>Relative</em> (portable) or <em>Absolute</em> (fixed structure).</li>
@@ -169,3 +178,6 @@
 
     </div>
 </div>
+
+</body>
+</html>

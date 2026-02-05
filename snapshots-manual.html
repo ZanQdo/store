@@ -1,3 +1,12 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snapshots User Manual</title>
+</head>
+<body style="margin:0; padding:0; background-color:#ffffff;">
+
 <div style="font-family:'Inter', Helvetica, Arial, sans-serif; background-color:#ffffff; color:#475569; padding:0; margin:0; line-height:1.6; -webkit-font-smoothing: antialiased;">
     <div style="max-width:720px; margin:0 auto; padding:40px 20px;">
         
@@ -63,8 +72,8 @@
             </h2>
             <p style="margin-bottom:20px;">Press <strong style="color:#0f172a; border:1px solid #cbd5e1; border-radius:4px; padding:0 4px; font-size:12px;">N</strong> in the 3D Viewport and select the <strong>Snapshots</strong> tab.</p>
 
-            <div style="display:grid; grid-template-columns: 1fr; gap:20px;">
-                <div style="border:1px solid #e2e8f0; border-radius:8px; padding:20px;">
+            <div style="display:block;">
+                <div style="background-color:#f8fafc; border:1px solid #e2e8f0; border-radius:8px; padding:20px; margin-bottom:20px;">
                     <h3 style="font-size:15px; font-weight:700; color:#0f172a; margin-top:0;">4.1 Creating a Snapshot</h3>
                     <p style="font-size:14px; margin-bottom:12px;">Click <strong>Create Snapshot</strong>.</p>
                     <ul style="font-size:14px; padding-left:20px; margin-bottom:0;">
@@ -73,7 +82,7 @@
                     </ul>
                 </div>
 
-                <div style="border:1px solid #e2e8f0; border-radius:8px; padding:20px;">
+                <div style="background-color:#f8fafc; border:1px solid #e2e8f0; border-radius:8px; padding:20px;">
                     <h3 style="font-size:15px; font-weight:700; color:#0f172a; margin-top:0;">4.2 Managing Your History</h3>
                     <p style="font-size:14px; margin-bottom:12px;">Each snapshot is a collapsible container:</p>
                     <ul style="font-size:14px; padding-left:20px; margin-bottom:0;">
@@ -147,10 +156,16 @@
             <div>
                 <h3 style="font-size:16px; font-weight:600; color:#0f172a; margin-bottom:8px;">6.2 Scene-Level Restoration</h3>
                 <p style="font-size:14px; margin-bottom:12px;">Inside the expanded snapshot panel, use the quick-action buttons to restore:</p>
-                <div style="display:flex; gap:12px; flex-wrap:wrap;">
-                    <span style="background:#fff; border:1px solid #cbd5e1; padding:6px 12px; border-radius:20px; font-size:12px; color:#0f172a;"><strong>Scene:</strong> Settings &amp; Units</span>
-                    <span style="background:#fff; border:1px solid #cbd5e1; padding:6px 12px; border-radius:20px; font-size:12px; color:#0f172a;"><strong>World:</strong> Lighting &amp; Shaders</span>
-                    <span style="background:#fff; border:1px solid #cbd5e1; padding:6px 12px; border-radius:20px; font-size:12px; color:#0f172a;"><strong>View Layer:</strong> Visibility</span>
+                <div style="display:flex; flex-wrap:wrap; margin:-6px;">
+                    <div style="padding:6px;">
+                        <span style="display:inline-block; background:#fff; border:1px solid #cbd5e1; padding:6px 12px; border-radius:20px; font-size:12px; color:#0f172a;"><strong>Scene:</strong> Settings &amp; Units</span>
+                    </div>
+                    <div style="padding:6px;">
+                        <span style="display:inline-block; background:#fff; border:1px solid #cbd5e1; padding:6px 12px; border-radius:20px; font-size:12px; color:#0f172a;"><strong>World:</strong> Lighting &amp; Shaders</span>
+                    </div>
+                    <div style="padding:6px;">
+                        <span style="display:inline-block; background:#fff; border:1px solid #cbd5e1; padding:6px 12px; border-radius:20px; font-size:12px; color:#0f172a;"><strong>View Layer:</strong> Visibility</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -160,18 +175,38 @@
             <h2 style="font-size:20px; font-weight:700; color:#1e293b; margin-bottom:16px; display:flex; align-items:center;">
                 <span style="background:#eff6ff; color:#3b82f6; font-size:12px; padding:4px 8px; border-radius:6px; margin-right:12px;">07</span> Technical Compatibility
             </h2>
-            <div style="display:grid; grid-template-columns: 1fr 1fr; gap:12px;">
-                <div style="background:#f1f5f9; padding:12px; border-radius:6px; font-size:13px; color:#334155;">
-                    <strong style="color:#0f172a;">Geometry:</strong><br> Meshes, Curves, Lattices, Text, Armatures.
+            
+            <div style="display:flex; flex-wrap:wrap; margin: -6px;">
+                <!-- Card 1 -->
+                <div style="flex:1 1 280px; padding:6px; box-sizing:border-box;">
+                    <div style="background-color:#f1f5f9; padding:12px; border-radius:6px; height:100%; box-sizing:border-box; font-size:13px; color:#334155;">
+                        <strong style="color:#0f172a;">Geometry:</strong><br>
+                        Meshes, Curves, Lattices, Text, Armatures.
+                    </div>
                 </div>
-                <div style="background:#f1f5f9; padding:12px; border-radius:6px; font-size:13px; color:#334155;">
-                    <strong style="color:#0f172a;">Grease Pencil:</strong><br> Legacy and Grease Pencil v3.
+
+                <!-- Card 2 -->
+                <div style="flex:1 1 280px; padding:6px; box-sizing:border-box;">
+                    <div style="background-color:#f1f5f9; padding:12px; border-radius:6px; height:100%; box-sizing:border-box; font-size:13px; color:#334155;">
+                        <strong style="color:#0f172a;">Grease Pencil:</strong><br>
+                        Legacy and Grease Pencil v3.
+                    </div>
                 </div>
-                <div style="background:#f1f5f9; padding:12px; border-radius:6px; font-size:13px; color:#334155;">
-                    <strong style="color:#0f172a;">Nodes:</strong><br> Geo Nodes, Shader trees, Compositor.
+
+                <!-- Card 3 -->
+                <div style="flex:1 1 280px; padding:6px; box-sizing:border-box;">
+                    <div style="background-color:#f1f5f9; padding:12px; border-radius:6px; height:100%; box-sizing:border-box; font-size:13px; color:#334155;">
+                        <strong style="color:#0f172a;">Nodes:</strong><br>
+                        Geo Nodes, Shader trees, Compositor.
+                    </div>
                 </div>
-                <div style="background:#f1f5f9; padding:12px; border-radius:6px; font-size:13px; color:#334155;">
-                    <strong style="color:#0f172a;">Metadata:</strong><br> Palettes, Freestyle, Textures.
+
+                <!-- Card 4 -->
+                <div style="flex:1 1 280px; padding:6px; box-sizing:border-box;">
+                    <div style="background-color:#f1f5f9; padding:12px; border-radius:6px; height:100%; box-sizing:border-box; font-size:13px; color:#334155;">
+                        <strong style="color:#0f172a;">Metadata:</strong><br>
+                        Palettes, Freestyle, Textures.
+                    </div>
                 </div>
             </div>
         </div>
@@ -183,3 +218,6 @@
 
     </div>
 </div>
+
+</body>
+</html>

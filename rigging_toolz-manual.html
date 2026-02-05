@@ -1,3 +1,12 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pataz Rigging Toolz User Manual</title>
+</head>
+<body style="margin:0; padding:0; background-color:#ffffff;">
+
 <div style="font-family:'Inter', Helvetica, Arial, sans-serif; background-color:#ffffff; color:#475569; padding:0; margin:0; line-height:1.6; -webkit-font-smoothing: antialiased;">
     <div style="max-width:720px; margin:0 auto; padding:40px 20px;">
         
@@ -57,8 +66,8 @@
             </h2>
             <p style="margin-bottom:20px; font-size:14px; color:#64748b;">Central control over the generation process.</p>
             
-            <div style="display:grid; grid-template-columns: 1fr; gap:20px;">
-                <div style="border:1px solid #e2e8f0; border-radius:8px; padding:20px;">
+            <div style="display:block;">
+                <div style="background-color:#f8fafc; border:1px solid #e2e8f0; border-radius:8px; padding:20px;">
                     <ul style="font-size:14px; padding-left:20px; margin-bottom:0; color:#334155;">
                         <li style="margin-bottom:12px;"><strong>Generate Rig:</strong> This supercharged operator functions like the standard Rigify generator but integrates the powerful "Preserve" options.</li>
                         <li><strong>Rig ⇄ Metarig:</strong> Instantly swap between your metarig and its generated rig. The addon handles hiding, showing, and selecting the correct armature for a seamless context switch.</li>
@@ -87,24 +96,36 @@
             <div>
                 <h3 style="font-size:16px; font-weight:600; color:#0f172a; margin-bottom:12px; padding-bottom:8px; border-bottom:1px solid #f1f5f9;">4.2 The "Preserve" Toggles</h3>
                 <p style="font-size:14px; margin-bottom:12px; color:#64748b;">Save and restore properties modified on the generated rig's bones.</p>
-                <div style="display:grid; grid-template-columns: 1fr 1fr; gap:12px;">
-                    <div style="background:#f1f5f9; padding:12px; border-radius:6px; font-size:13px; color:#334155;">
-                        <strong style="color:#0f172a;">Bone Constraints:</strong><br> The powerhouse. Preserves the entire constraint stack (drivers included) on each bone.
+                <div style="display:flex; flex-wrap:wrap; margin:-6px;">
+                    <div style="flex:1 1 240px; padding:6px; box-sizing:border-box;">
+                        <div style="background:#f8fafc; border:1px solid #e2e8f0; padding:12px; border-radius:6px; font-size:13px; color:#334155; height:100%; box-sizing:border-box;">
+                            <strong style="color:#0f172a;">Bone Constraints:</strong><br> The powerhouse. Preserves the entire constraint stack (drivers included) on each bone.
+                        </div>
                     </div>
-                    <div style="background:#f1f5f9; padding:12px; border-radius:6px; font-size:13px; color:#334155;">
-                        <strong style="color:#0f172a;">Transform Locks:</strong><br> Keeps locked channels safe.
+                    <div style="flex:1 1 240px; padding:6px; box-sizing:border-box;">
+                        <div style="background:#f8fafc; border:1px solid #e2e8f0; padding:12px; border-radius:6px; font-size:13px; color:#334155; height:100%; box-sizing:border-box;">
+                            <strong style="color:#0f172a;">Transform Locks:</strong><br> Keeps locked channels safe.
+                        </div>
                     </div>
-                    <div style="background:#f1f5f9; padding:12px; border-radius:6px; font-size:13px; color:#334155;">
-                        <strong style="color:#0f172a;">Custom Shape:</strong><br> Saves custom shapes and their transforms.
+                    <div style="flex:1 1 240px; padding:6px; box-sizing:border-box;">
+                        <div style="background:#f8fafc; border:1px solid #e2e8f0; padding:12px; border-radius:6px; font-size:13px; color:#334155; height:100%; box-sizing:border-box;">
+                            <strong style="color:#0f172a;">Custom Shape:</strong><br> Saves custom shapes and their transforms.
+                        </div>
                     </div>
-                    <div style="background:#f1f5f9; padding:12px; border-radius:6px; font-size:13px; color:#334155;">
-                        <strong style="color:#0f172a;">Custom Properties:</strong><br> Restores added properties and their drivers.
+                    <div style="flex:1 1 240px; padding:6px; box-sizing:border-box;">
+                        <div style="background:#f8fafc; border:1px solid #e2e8f0; padding:12px; border-radius:6px; font-size:13px; color:#334155; height:100%; box-sizing:border-box;">
+                            <strong style="color:#0f172a;">Custom Properties:</strong><br> Restores added properties and their drivers.
+                        </div>
                     </div>
-                    <div style="background:#f1f5f9; padding:12px; border-radius:6px; font-size:13px; color:#334155;">
-                        <strong style="color:#0f172a;">Bone Collections:</strong><br> Keeps custom collection assignments.
+                    <div style="flex:1 1 240px; padding:6px; box-sizing:border-box;">
+                        <div style="background:#f8fafc; border:1px solid #e2e8f0; padding:12px; border-radius:6px; font-size:13px; color:#334155; height:100%; box-sizing:border-box;">
+                            <strong style="color:#0f172a;">Bone Collections:</strong><br> Keeps custom collection assignments.
+                        </div>
                     </div>
-                    <div style="background:#f1f5f9; padding:12px; border-radius:6px; font-size:13px; color:#334155;">
-                        <strong style="color:#0f172a;">Bendy Bones:</strong><br> Preserves B-Bone segments and settings.
+                    <div style="flex:1 1 240px; padding:6px; box-sizing:border-box;">
+                        <div style="background:#f8fafc; border:1px solid #e2e8f0; padding:12px; border-radius:6px; font-size:13px; color:#334155; height:100%; box-sizing:border-box;">
+                            <strong style="color:#0f172a;">Bendy Bones:</strong><br> Preserves B-Bone segments and settings.
+                        </div>
                     </div>
                 </div>
             </div>
@@ -125,7 +146,7 @@
                 <li style="margin-bottom:12px;"><strong>Reset Constraint Distances:</strong> Fixes stretched limbs by resetting <code>rest_length</code> on 'Stretch To' constraints.</li>
             </ul>
 
-            <div style="border:1px solid #e2e8f0; border-radius:8px; padding:20px;">
+            <div style="background-color:#ffffff; border:1px solid #e2e8f0; border-radius:8px; padding:20px;">
                 <h3 style="font-size:15px; font-weight:700; color:#0f172a; margin-top:0;">Edit Custom Shapes</h3>
                 <p style="font-size:14px; margin-bottom:12px;">A huge workflow accelerator. In Pose Mode, select a bone and click this button to instantly enter Edit Mode for its custom shape. Click again to return to posing.</p>
                 <img src="https://assets.superhivemarket.com/cache/2a67460635244e724fd427b5d08904d7.gif" alt="Edit Custom Shapes Workflow" style="max-width:100%; border-radius:6px; border:1px solid #e2e8f0;">
@@ -142,11 +163,19 @@
             <div style="margin-bottom:24px;">
                 <h3 style="font-size:16px; font-weight:600; color:#0f172a; margin-bottom:8px;">Toggle Weight Paint</h3>
                 <p style="font-size:14px; color:#64748b;">One-button setup for the perfect skinning environment. Automatically enables:</p>
-                <div style="display:flex; gap:8px; flex-wrap:wrap; margin-bottom:16px;">
-                    <span style="background:#fff; border:1px solid #cbd5e1; padding:4px 10px; border-radius:20px; font-size:12px; color:#0f172a;">Armature X-Ray</span>
-                    <span style="background:#fff; border:1px solid #cbd5e1; padding:4px 10px; border-radius:20px; font-size:12px; color:#0f172a;">Wireframe on Mesh</span>
-                    <span style="background:#fff; border:1px solid #cbd5e1; padding:4px 10px; border-radius:20px; font-size:12px; color:#0f172a;">Solo Deform Bones</span>
-                    <span style="background:#fff; border:1px solid #cbd5e1; padding:4px 10px; border-radius:20px; font-size:12px; color:#0f172a;">Rest Pose</span>
+                <div style="display:flex; flex-wrap:wrap; margin:-4px; margin-bottom:12px;">
+                    <div style="padding:4px;">
+                        <span style="display:inline-block; background:#fff; border:1px solid #cbd5e1; padding:4px 10px; border-radius:20px; font-size:12px; color:#0f172a;">Armature X-Ray</span>
+                    </div>
+                    <div style="padding:4px;">
+                        <span style="display:inline-block; background:#fff; border:1px solid #cbd5e1; padding:4px 10px; border-radius:20px; font-size:12px; color:#0f172a;">Wireframe on Mesh</span>
+                    </div>
+                    <div style="padding:4px;">
+                        <span style="display:inline-block; background:#fff; border:1px solid #cbd5e1; padding:4px 10px; border-radius:20px; font-size:12px; color:#0f172a;">Solo Deform Bones</span>
+                    </div>
+                    <div style="padding:4px;">
+                        <span style="display:inline-block; background:#fff; border:1px solid #cbd5e1; padding:4px 10px; border-radius:20px; font-size:12px; color:#0f172a;">Rest Pose</span>
+                    </div>
                 </div>
             </div>
 
@@ -175,18 +204,26 @@
                 <span style="background:#eff6ff; color:#3b82f6; font-size:12px; padding:4px 8px; border-radius:6px; margin-right:12px;">07</span> Cleanup Crew
             </h2>
             <p style="margin-bottom:16px;">One-click operators to safely remove bad or orphaned data from all selected objects.</p>
-            <div style="display:grid; grid-template-columns: 1fr 1fr; gap:12px;">
-                <div style="background:#f1f5f9; padding:12px; border-radius:6px; font-size:13px; color:#334155;">
-                    <strong style="color:#0f172a;">Clear Vertex Groups:</strong><br> Deletes all groups.
+            <div style="display:flex; flex-wrap:wrap; margin: -6px;">
+                <div style="flex:1 1 240px; padding:6px; box-sizing:border-box;">
+                    <div style="background:#f8fafc; border:1px solid #e2e8f0; padding:12px; border-radius:6px; font-size:13px; color:#334155; height:100%; box-sizing:border-box;">
+                        <strong style="color:#0f172a;">Clear Vertex Groups:</strong><br> Deletes all groups.
+                    </div>
                 </div>
-                <div style="background:#f1f5f9; padding:12px; border-radius:6px; font-size:13px; color:#334155;">
-                    <strong style="color:#0f172a;">Clear/Apply Shape Keys:</strong><br> Removes keys or bakes current mix.
+                <div style="flex:1 1 240px; padding:6px; box-sizing:border-box;">
+                    <div style="background:#f8fafc; border:1px solid #e2e8f0; padding:12px; border-radius:6px; font-size:13px; color:#334155; height:100%; box-sizing:border-box;">
+                        <strong style="color:#0f172a;">Clear/Apply Shape Keys:</strong><br> Removes keys or bakes current mix.
+                    </div>
                 </div>
-                <div style="background:#f1f5f9; padding:12px; border-radius:6px; font-size:13px; color:#334155;">
-                    <strong style="color:#0f172a;">Clear UV Maps:</strong><br> Deletes all UV layers.
+                <div style="flex:1 1 240px; padding:6px; box-sizing:border-box;">
+                    <div style="background:#f8fafc; border:1px solid #e2e8f0; padding:12px; border-radius:6px; font-size:13px; color:#334155; height:100%; box-sizing:border-box;">
+                        <strong style="color:#0f172a;">Clear UV Maps:</strong><br> Deletes all UV layers.
+                    </div>
                 </div>
-                <div style="background:#f1f5f9; padding:12px; border-radius:6px; font-size:13px; color:#334155;">
-                    <strong style="color:#0f172a;">Lock Transforms:</strong><br> Protects objects from accidental movement.
+                <div style="flex:1 1 240px; padding:6px; box-sizing:border-box;">
+                    <div style="background:#f8fafc; border:1px solid #e2e8f0; padding:12px; border-radius:6px; font-size:13px; color:#334155; height:100%; box-sizing:border-box;">
+                        <strong style="color:#0f172a;">Lock Transforms:</strong><br> Protects objects from accidental movement.
+                    </div>
                 </div>
             </div>
         </div>
@@ -198,3 +235,6 @@
 
     </div>
 </div>
+
+</body>
+</html>
