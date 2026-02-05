@@ -12,8 +12,9 @@
         
         <!-- Header -->
         <div style="border-bottom:1px solid #e2e8f0; padding-bottom:24px; margin-bottom:40px;">
-            <h1 style="font-weight:800; color:#0f172a; margin:0 0 8px 0; letter-spacing:-1px; font-size:32px;">
-                Natural Lighting <span style="color:#3b82f6; font-weight:300;">User Manual</span>
+            <h1 style="font-weight:800; color:#0f172a; margin:0 0 8px 0; letter-spacing:-1px; font-size:32px; display:flex; flex-wrap:wrap;">
+                <span style="white-space:nowrap; margin-right:8px;">Natural Lighting</span> 
+                <span style="color:#3b82f6; font-weight:300; white-space:nowrap;">User Manual</span>
             </h1>
             <p style="margin:0; color:#64748b; font-size:14px;">Realistic Animated Lighting System</p>
         </div>
@@ -119,10 +120,16 @@
                         <li style="margin-bottom:8px;"><strong>Temperature (Kelvin):</strong> 
                             Based on black body radiation.
                             <br><span style="color:#64748b; font-size:13px;">2500K = Warm Yellow | 6500K = Daylight White | 12000K = Cool Blue</span>
-                            <div style="display:flex; gap:8px; margin-top:8px;">
-                                <img src="https://markets-rails.s3.amazonaws.com/cache/fbcae9cbcf080b6d1ab376f09b1b1edb.png" style="width:32%; border-radius:4px;">
-                                <img src="https://markets-rails.s3.amazonaws.com/cache/61a89d6e9294848e6ea6b69e016eedae.png" style="width:32%; border-radius:4px;">
-                                <img src="https://markets-rails.s3.amazonaws.com/cache/60b557695433980531f6b6e9e713ef80.png" style="width:32%; border-radius:4px;">
+                            <div style="display:flex; flex-wrap:wrap; margin:8px -4px -4px -4px;">
+                                <div style="flex:1 1 80px; padding:4px; box-sizing:border-box;">
+                                    <img src="https://markets-rails.s3.amazonaws.com/cache/fbcae9cbcf080b6d1ab376f09b1b1edb.png" style="width:100%; border-radius:4px; display:block;">
+                                </div>
+                                <div style="flex:1 1 80px; padding:4px; box-sizing:border-box;">
+                                    <img src="https://markets-rails.s3.amazonaws.com/cache/61a89d6e9294848e6ea6b69e016eedae.png" style="width:100%; border-radius:4px; display:block;">
+                                </div>
+                                <div style="flex:1 1 80px; padding:4px; box-sizing:border-box;">
+                                    <img src="https://markets-rails.s3.amazonaws.com/cache/60b557695433980531f6b6e9e713ef80.png" style="width:100%; border-radius:4px; display:block;">
+                                </div>
                             </div>
                         </li>
                         <li><strong>Tint:</strong> Colorize the light with an RGB picker.</li>
@@ -134,10 +141,16 @@
                     <p style="font-size:14px; margin-bottom:12px;">Adds a soft warm glow, mostly visible at shadow edges.</p>
                     <ul style="font-size:14px; padding-left:20px; color:#334155; margin-bottom:0;">
                         <li style="margin-bottom:8px;"><strong>Strength:</strong> Factor of main light power (0.5 = half power).
-                            <div style="display:flex; gap:8px; margin-top:8px;">
-                                <img src="https://markets-rails.s3.amazonaws.com/cache/1e08c15a9c93f2c6ea5eaa062b7f0d3d.png" style="width:32%; border-radius:4px;">
-                                <img src="https://markets-rails.s3.amazonaws.com/cache/230bce4c6505d2c67f6fe7109420bd64.png" style="width:32%; border-radius:4px;">
-                                <img src="https://markets-rails.s3.amazonaws.com/cache/b95943537d939d3336d88cff579a6090.png" style="width:32%; border-radius:4px;">
+                            <div style="display:flex; flex-wrap:wrap; margin:8px -4px -4px -4px;">
+                                <div style="flex:1 1 80px; padding:4px; box-sizing:border-box;">
+                                    <img src="https://markets-rails.s3.amazonaws.com/cache/1e08c15a9c93f2c6ea5eaa062b7f0d3d.png" style="width:100%; border-radius:4px; display:block;">
+                                </div>
+                                <div style="flex:1 1 80px; padding:4px; box-sizing:border-box;">
+                                    <img src="https://markets-rails.s3.amazonaws.com/cache/230bce4c6505d2c67f6fe7109420bd64.png" style="width:100%; border-radius:4px; display:block;">
+                                </div>
+                                <div style="flex:1 1 80px; padding:4px; box-sizing:border-box;">
+                                    <img src="https://markets-rails.s3.amazonaws.com/cache/b95943537d939d3336d88cff579a6090.png" style="width:100%; border-radius:4px; display:block;">
+                                </div>
                             </div>
                         </li>
                         <li style="margin-bottom:8px;"><strong>Temperature:</strong> Usually half the main temp for a "warm" effect.</li>
