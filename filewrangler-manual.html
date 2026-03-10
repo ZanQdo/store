@@ -16,10 +16,10 @@
                 <span style="background:#eff6ff; color:#3b82f6; font-size:12px; padding:4px 8px; border-radius:6px; margin-right:12px;">01</span> Introduction
             </h2>
             <p style="margin-bottom:16px;">
-                Welcome to <strong style="color:#0f172a;">File Wrangler</strong>! This Blender addon is a powerful batch processing tool designed to automate repetitive tasks across multiple <code style="background-color:#e2e8f0; color:#0f172a; padding:2px 6px; border-radius:4px; font-size:13px; font-family:monospace;">.blend</code> files. Whether you need to clean up entire project directories, change file settings, or run custom scripts, File Wrangler saves you hours of manual work by handling it all in one go.
+                Welcome to <strong style="color:#0f172a;">File Wrangler</strong>! This powerful pipeline tool automates repetitive tasks across multiple <code style="background-color:#e2e8f0; color:#0f172a; padding:2px 6px; border-radius:4px; font-size:13px; font-family:monospace;">.blend</code> files. Whether you need to clean up entire project directories, change file settings, run custom Python scripts, or unify workspace layouts, File Wrangler saves you hours of manual work by handling it all in one go.
             </p>
             <p>
-                The core philosophy is to set up a series of actions, apply filters to target specific files, and execute the process safely and efficiently.
+                The core philosophy is simple: set your target files, configure your actions, and let the batch processor safely execute them in the background.
             </p>
         </div>
 
@@ -29,112 +29,113 @@
                 <span style="background:#eff6ff; color:#3b82f6; font-size:12px; padding:4px 8px; border-radius:6px; margin-right:12px;">02</span> Installation
             </h2>
             <div style="background-color:#f8fafc; border:1px solid #e2e8f0; border-radius:12px; padding:24px;">
+                <p style="font-size:14px; margin-top:0; margin-bottom:12px; color:#334155;">File Wrangler is packaged as a standard Blender 4.2+ Extension.</p>
                 <ol style="margin:0; padding-left:20px; color:#334155;">
                     <li style="margin-bottom:12px;">Download the <code style="background-color:#e2e8f0; color:#0f172a; padding:2px 6px; border-radius:4px; font-size:13px; font-family:monospace;">file_wrangler.zip</code> file.</li>
-                    <li style="margin-bottom:12px;">In Blender, go to <strong style="color:#0f172a;">Edit &gt; Preferences &gt; Add-ons</strong>.</li>
-                    <li style="margin-bottom:12px;">Click the <strong style="color:#0f172a;">Install...</strong> button at the top-right.</li>
+                    <li style="margin-bottom:12px;">In Blender, go to <strong style="color:#0f172a;">Edit &gt; Preferences &gt; Get Extensions</strong>.</li>
+                    <li style="margin-bottom:12px;">Click the drop-down arrow at the top right and select <strong style="color:#0f172a;">Install from Disk...</strong></li>
                     <li style="margin-bottom:12px;">Select the downloaded <code style="background-color:#e2e8f0; color:#0f172a; padding:2px 6px; border-radius:4px; font-size:13px; font-family:monospace;">.zip</code> file.</li>
-                    <li>Enable the addon by ticking the checkbox next to its name.</li>
+                    <li>Ensure the extension is enabled by ticking the checkbox.</li>
                 </ol>
             </div>
         </div>
 
-        <!-- 3. Interface -->
+        <!-- 3. Configuration & I/O -->
         <div style="margin-bottom:40px;">
             <h2 style="font-size:20px; font-weight:700; color:#1e293b; margin-bottom:16px; display:flex; align-items:center;">
-                <span style="background:#eff6ff; color:#3b82f6; font-size:12px; padding:4px 8px; border-radius:6px; margin-right:12px;">03</span> The Interface
+                <span style="background:#eff6ff; color:#3b82f6; font-size:12px; padding:4px 8px; border-radius:6px; margin-right:12px;">03</span> Setup &amp; Inputs
             </h2>
-            <p style="margin-bottom:16px;">
-                Open the Sidebar in the 3D Viewport by pressing <strong style="color:#0f172a; border:1px solid #cbd5e1; border-radius:4px; padding:0 4px; font-size:12px;">N</strong> and look for the <strong style="color:#0f172a;">File Wrangler</strong> tab.
-            </p>
-            <p style="font-size:14px; color:#64748b;">The panel is organized into three main sections: <strong>Setup &amp; I/O</strong>, <strong>Filename Filters</strong>, and <strong>Actions</strong>.</p>
-        </div>
-
-        <!-- 4. Setup & Filters -->
-        <div style="margin-bottom:40px;">
-            <h2 style="font-size:20px; font-weight:700; color:#1e293b; margin-bottom:16px; display:flex; align-items:center;">
-                <span style="background:#eff6ff; color:#3b82f6; font-size:12px; padding:4px 8px; border-radius:6px; margin-right:12px;">04</span> Configuration
-            </h2>
+            <p style="margin-bottom:20px; font-size:14px; color:#64748b;">Press <strong style="color:#0f172a; border:1px solid #cbd5e1; border-radius:4px; padding:0 4px; font-size:12px;">N</strong> in the 3D Viewport to open the Sidebar and locate the <strong>File Wrangler</strong> tab.</p>
             
             <div style="margin-bottom:24px;">
-                <h3 style="font-size:16px; font-weight:600; color:#0f172a; margin-bottom:12px; padding-bottom:8px; border-bottom:1px solid #f1f5f9;">4.1 Setup &amp; I/O</h3>
-                <p style="font-size:14px; margin-bottom:12px;">Defines <strong>what</strong> files to process and <strong>where</strong> to save them.</p>
-                <ul style="font-size:14px; padding-left:20px; color:#334155; margin-bottom:0;">
-                    <li style="margin-bottom:8px;"><strong>Source Directory:</strong> The main folder containing your <code>.blend</code> files.</li>
-                    <li style="margin-bottom:8px;"><strong>Output Directory (Recommended):</strong>
-                        <ul style="margin-top:4px; margin-bottom:8px;">
-                            <li style="margin-bottom:4px;"><em>If set:</em> Copies structure and saves modified files here. <strong>Safe &amp; Non-destructive.</strong></li>
-                            <li><em>If blank:</em> Overwrites original files. <strong>Use with caution.</strong></li>
-                        </ul>
-                    </li>
-                    <li style="margin-bottom:8px;"><strong>Search Recursively:</strong> If enabled, searches subfolders.</li>
-                    <li><strong>Write Log File:</strong> Creates <code>file_wrangler_log.txt</code> recording all actions and errors.</li>
-                </ul>
+                <h3 style="font-size:16px; font-weight:600; color:#0f172a; margin-bottom:12px; padding-bottom:8px; border-bottom:1px solid #f1f5f9;">3.1 Input Modes</h3>
+                <p style="font-size:14px; margin-bottom:12px;">Choose how to target your files. File Wrangler offers two distinct workflows:</p>
+                
+                <div style="display:flex; flex-wrap:wrap; margin:0 -6px;">
+                    <!-- Directory Search Card -->
+                    <div style="flex:1 1 280px; margin:6px; background-color:#f8fafc; border:1px solid #e2e8f0; padding:16px; border-radius:8px; box-sizing:border-box;">
+                        <strong style="color:#0f172a; display:block; margin-bottom:8px;">Directory Search</strong>
+                        <p style="font-size:13px; margin:0;">Target an entire folder. Supports recursive searching (scanning all subdirectories) and filtering using inclusive/exclusive filename keywords.</p>
+                    </div>
+                    <!-- Custom List Card -->
+                    <div style="flex:1 1 280px; margin:6px; background-color:#f8fafc; border:1px solid #e2e8f0; padding:16px; border-radius:8px; box-sizing:border-box;">
+                        <strong style="color:#0f172a; display:block; margin-bottom:8px;">Custom File List</strong>
+                        <p style="font-size:13px; margin:0;">Curate a precise batch. Manually add specific <code style="font-family:monospace;">.blend</code> files to a list, bypassing entire folders and filters completely.</p>
+                    </div>
+                </div>
             </div>
 
             <div>
-                <h3 style="font-size:16px; font-weight:600; color:#0f172a; margin-bottom:12px; padding-bottom:8px; border-bottom:1px solid #f1f5f9;">4.2 Filename Filters</h3>
-                <p style="font-size:14px; margin-bottom:12px;">Precisely target files (e.g., characters, environments).</p>
+                <h3 style="font-size:16px; font-weight:600; color:#0f172a; margin-bottom:12px; padding-bottom:8px; border-bottom:1px solid #f1f5f9;">3.2 Output &amp; Logging</h3>
                 <ul style="font-size:14px; padding-left:20px; color:#334155; margin-bottom:0;">
-                    <li style="margin-bottom:8px;"><strong>Include files containing:</strong> Process <em>only</em> files matching these keywords (e.g., <code>character, prop</code>).</li>
-                    <li><strong>Exclude files containing:</strong> Skip files matching these keywords (e.g., <code>test, old, broken</code>).</li>
+                    <li style="margin-bottom:8px;"><strong>Output Directory (Recommended):</strong>
+                        <ul style="margin-top:4px; margin-bottom:8px;">
+                            <li style="margin-bottom:4px;"><em>If set:</em> Copies your exact folder structure and saves the modified files here. <strong>This is non-destructive and safe.</strong></li>
+                            <li><em>If blank:</em> Overwrites the original files in place. <strong>Use with caution.</strong></li>
+                        </ul>
+                    </li>
+                    <li><strong>Write Log File:</strong> Creates a detailed <code style="font-family:monospace;">file_wrangler_log.txt</code> in the output directory, recording every modified file, error, or custom script printout.</li>
                 </ul>
             </div>
         </div>
 
-        <!-- 5. Actions -->
+        <!-- 4. Actions -->
         <div style="margin-bottom:40px;">
             <h2 style="font-size:20px; font-weight:700; color:#1e293b; margin-bottom:16px; display:flex; align-items:center;">
-                <span style="background:#eff6ff; color:#3b82f6; font-size:12px; padding:4px 8px; border-radius:6px; margin-right:12px;">05</span> Actions
+                <span style="background:#eff6ff; color:#3b82f6; font-size:12px; padding:4px 8px; border-radius:6px; margin-right:12px;">04</span> Actions Toolkit
             </h2>
-            <p style="margin-bottom:20px; font-size:14px; color:#64748b;">Choose operations to perform on the targeted files.</p>
+            <p style="margin-bottom:20px; font-size:14px; color:#64748b;">Select one or more actions to perform sequentially on every targeted file.</p>
             
-            <div style="display:block;">
-                <div style="background:#f8fafc; padding:16px; border-radius:8px; border:1px solid #e2e8f0; margin-bottom:12px;">
-                    <strong style="color:#0f172a; display:block; margin-bottom:4px;">Delete Backup Files (.blend1)</strong>
-                    <p style="font-size:13px; color:#334155; margin:0;">Scans the directory and deletes all backup files to clean up clutter. Runs independently of the main loop.</p>
-                </div>
-                
-                <div style="background:#f8fafc; padding:16px; border-radius:8px; border:1px solid #e2e8f0; margin-bottom:12px;">
-                    <strong style="color:#0f172a; display:block; margin-bottom:4px;">Purge Unused Data</strong>
-                    <p style="font-size:13px; color:#334155; margin:0;">Performs a recursive "Orphans Purge" on each file, removing unused materials, textures, and node groups.</p>
+            <div style="display:flex; flex-wrap:wrap; margin:0 -6px;">
+                <!-- Overwrite UI -->
+                <div style="flex:1 1 280px; margin:6px; background:#f8fafc; padding:16px; border-radius:8px; border:1px solid #e2e8f0; box-sizing:border-box;">
+                    <strong style="color:#0f172a; display:block; margin-bottom:4px;">Overwrite UI</strong>
+                    <p style="font-size:13px; color:#334155; margin:0;">Forces all processed files to adopt your <strong>current window layout</strong> and workspace setup upon saving.</p>
                 </div>
 
-                <div style="background:#f8fafc; padding:16px; border-radius:8px; border:1px solid #e2e8f0; margin-bottom:12px;">
-                    <strong style="color:#0f172a; display:block; margin-bottom:4px;">Find Missing Files</strong>
-                    <p style="font-size:13px; color:#334155; margin:0;">Attempts to locate and relink missing external assets. Specify a <strong>Search Path</strong> or default to the Source Directory.</p>
-                </div>
-
-                <div style="background:#f8fafc; padding:16px; border-radius:8px; border:1px solid #e2e8f0; margin-bottom:12px;">
+                <!-- Run Script -->
+                <div style="flex:1 1 280px; margin:6px; background:#f8fafc; padding:16px; border-radius:8px; border:1px solid #e2e8f0; box-sizing:border-box;">
                     <strong style="color:#0f172a; display:block; margin-bottom:4px;">Run Custom Script</strong>
-                    <p style="font-size:13px; color:#334155; margin:0 0 8px 0;">Run a Python script on every file. Use <code>bpy</code> and <code>os</code> modules.</p>
-                    <ul style="font-size:13px; color:#334155; margin:0; padding-left:16px;">
-                        <li><strong>External File:</strong> Load a <code>.py</code> file from disk.</li>
-                        <li><strong>Internal Text:</strong> Use a script from the Text Editor.</li>
-                    </ul>
+                    <p style="font-size:13px; color:#334155; margin:0;">Execute a Python script on every file. Load from an external <code style="font-family:monospace;">.py</code> file or select an internal text block.</p>
                 </div>
 
-                <div style="background:#f8fafc; padding:16px; border-radius:8px; border:1px solid #e2e8f0;">
-                    <strong style="color:#0f172a; display:block; margin-bottom:4px;">File Paths &amp; Compression</strong>
-                    <ul style="font-size:13px; color:#334155; margin:0; padding-left:16px;">
-                        <li style="margin-bottom:4px;"><strong>Paths:</strong> Set to <em>Relative</em> (portable) or <em>Absolute</em> (fixed structure).</li>
-                        <li><strong>Compression:</strong> Enable to save disk space, or disable for faster opening.</li>
-                    </ul>
+                <!-- Delete Backups -->
+                <div style="flex:1 1 280px; margin:6px; background:#f8fafc; padding:16px; border-radius:8px; border:1px solid #e2e8f0; box-sizing:border-box;">
+                    <strong style="color:#0f172a; display:block; margin-bottom:4px;">Delete Backup Files</strong>
+                    <p style="font-size:13px; color:#334155; margin:0;">Scans and permanently deletes auto-saved backups (e.g., <code style="font-family:monospace;">.blend1</code>) to free up hard drive space.</p>
+                </div>
+
+                <!-- Purge -->
+                <div style="flex:1 1 280px; margin:6px; background:#f8fafc; padding:16px; border-radius:8px; border:1px solid #e2e8f0; box-sizing:border-box;">
+                    <strong style="color:#0f172a; display:block; margin-bottom:4px;">Purge Unused Data</strong>
+                    <p style="font-size:13px; color:#334155; margin:0;">Performs a recursive "Orphans Purge", cleaning out unassigned materials, meshes, node groups, and textures.</p>
+                </div>
+
+                <!-- Missing Files -->
+                <div style="flex:1 1 280px; margin:6px; background:#f8fafc; padding:16px; border-radius:8px; border:1px solid #e2e8f0; box-sizing:border-box;">
+                    <strong style="color:#0f172a; display:block; margin-bottom:4px;">Find Missing Files</strong>
+                    <p style="font-size:13px; color:#334155; margin:0;">Automatically attempts to locate and relink broken image textures or external assets within a specified directory.</p>
+                </div>
+
+                <!-- Paths & Compression -->
+                <div style="flex:1 1 280px; margin:6px; background:#f8fafc; padding:16px; border-radius:8px; border:1px solid #e2e8f0; box-sizing:border-box;">
+                    <strong style="color:#0f172a; display:block; margin-bottom:4px;">Paths &amp; Compression</strong>
+                    <p style="font-size:13px; color:#334155; margin:0;">Convert all asset links to <em>Relative</em> or <em>Absolute</em> paths. Force files to save as <em>Compressed</em> (smaller) or <em>Decompressed</em> (faster loading).</p>
                 </div>
             </div>
         </div>
 
-        <!-- 6. Execution -->
+        <!-- 5. Execution & Safety -->
         <div style="margin-bottom:40px;">
             <h2 style="font-size:20px; font-weight:700; color:#1e293b; margin-bottom:16px; display:flex; align-items:center;">
-                <span style="background:#eff6ff; color:#3b82f6; font-size:12px; padding:4px 8px; border-radius:6px; margin-right:12px;">06</span> Execution &amp; Safety
+                <span style="background:#eff6ff; color:#3b82f6; font-size:12px; padding:4px 8px; border-radius:6px; margin-right:12px;">05</span> Execution Modes
             </h2>
             
             <div style="margin-bottom:24px;">
-                <h3 style="font-size:16px; font-weight:600; color:#0f172a; margin-bottom:8px;">Running the Process</h3>
                 <ul style="font-size:14px; padding-left:20px; color:#334155;">
-                    <li style="margin-bottom:8px;"><strong>Dry Run:</strong> A safe preview. Prints a list of affected files to the System Console/Log without making changes. <strong>Always use this first.</strong></li>
-                    <li><strong>Start Batch Process:</strong> Begins the operation. A progress bar allows you to <strong>Cancel</strong> if needed.</li>
+                    <li style="margin-bottom:12px;"><strong>Dry Run:</strong> Always use this first! It prints a list of affected files to the System Console/Log without making any actual changes.</li>
+                    <li style="margin-bottom:12px;"><strong>Start Batch Process:</strong> Runs the sequence interactively, allowing you to see progress and cancel at any time.</li>
+                    <li><strong>Run in Background:</strong> Spawns a separate, headless Blender instance to do the heavy lifting. This keeps your main UI completely responsive and protects your current session if a faulty file crashes the background worker.</li>
                 </ul>
             </div>
 
@@ -143,23 +144,23 @@
                     <span style="font-size:18px; margin-right:8px;">⚠️</span> Important Warnings
                 </strong>
                 <ul style="margin:8px 0 0 20px; color:#881337; font-size:14px;">
-                    <li style="margin-bottom:4px;"><strong>ALWAYS BACK UP YOUR DATA</strong> before running a batch process.</li>
-                    <li style="margin-bottom:4px;">Using a separate <strong>Output Directory</strong> is the recommended workflow.</li>
-                    <li>Actions like "Delete Backup Files" are permanent.</li>
+                    <li style="margin-bottom:4px;"><strong>ALWAYS BACK UP YOUR DATA</strong> before running an overwrite operation.</li>
+                    <li style="margin-bottom:4px;">Setting an <strong>Output Directory</strong> is the safest way to batch process.</li>
+                    <li>The "Delete Backup Files" operation bypasses the trash and is permanent.</li>
                 </ul>
             </div>
         </div>
 
-        <!-- 7. Preferences -->
+        <!-- 6. Preferences -->
         <div style="margin-bottom:60px;">
             <h2 style="font-size:20px; font-weight:700; color:#1e293b; margin-bottom:16px; display:flex; align-items:center;">
-                <span style="background:#eff6ff; color:#3b82f6; font-size:12px; padding:4px 8px; border-radius:6px; margin-right:12px;">07</span> Preferences
+                <span style="background:#eff6ff; color:#3b82f6; font-size:12px; padding:4px 8px; border-radius:6px; margin-right:12px;">06</span> Preferences
             </h2>
-            <p style="font-size:14px; margin-bottom:12px;">Customize the sidebar tab name:</p>
+            <p style="font-size:14px; margin-bottom:12px;">Customize where File Wrangler appears in the UI:</p>
             <ol style="font-size:14px; padding-left:20px; color:#334155;">
                 <li style="margin-bottom:6px;">Go to <strong>Edit &gt; Preferences &gt; Add-ons</strong>.</li>
-                <li style="margin-bottom:6px;">Expand "File Wrangler".</li>
-                <li>Change the <strong>UI Tab Name</strong> field.</li>
+                <li style="margin-bottom:6px;">Locate the "File Wrangler" preferences.</li>
+                <li>Change the <strong>UI Tab Name</strong> field to move the tool to a different Sidebar category (e.g., "Pipeline").</li>
             </ol>
         </div>
 
