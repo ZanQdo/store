@@ -43,161 +43,184 @@
             </h2>
             <p style="margin-bottom:20px; font-size:14px; color:#64748b;">Access these settings in <strong>Edit &gt; Preferences &gt; Add-ons &gt; Snapshots</strong>.</p>
             
-            <div style="margin-bottom:24px;">
-                <h3 style="font-size:16px; font-weight:600; color:#0f172a; margin-bottom:8px;">3.1 Global Snapshots Directory</h3>
-                <p style="margin-bottom:12px;">By default, Snapshots are saved in a dedicated folder relative to your project.</p>
-                <ul style="background-color:#fff; border-left:4px solid #3b82f6; padding:12px 12px 12px 20px; margin:0; list-style:none; background:#f0f9ff;">
-                    <li><strong style="color:#1e40af;">Studio/Pipeline Use:</strong> If you are working on a high-speed network or have limited local storage space, set a <strong>Global Snapshots Directory</strong> to centralize all backups to a secondary drive or server.</li>
+            <div style="display:flex; flex-wrap:wrap; margin: -6px;">
+                <!-- 3.1 Global Directory -->
+                <div style="flex:1 1 280px; padding:6px; box-sizing:border-box;">
+                    <div style="background-color:#ffffff; border:1px solid #e2e8f0; padding:20px; border-radius:8px; height:100%; box-sizing:border-box;">
+                        <h3 style="font-size:15px; font-weight:700; color:#0f172a; margin-top:0; margin-bottom:8px;">Global Snapshots Directory</h3>
+                        <p style="margin-bottom:12px; font-size:14px;">By default, Snapshots are saved relative to your project. Set a global directory to centralize backups to a secondary drive or network server, which is ideal for studio environments.</p>
+                    </div>
+                </div>
+
+                <!-- 3.2 UI Customization -->
+                <div style="flex:1 1 280px; padding:6px; box-sizing:border-box;">
+                    <div style="background-color:#ffffff; border:1px solid #e2e8f0; padding:20px; border-radius:8px; height:100%; box-sizing:border-box;">
+                        <h3 style="font-size:15px; font-weight:700; color:#0f172a; margin-top:0; margin-bottom:8px;">UI Tab Customization</h3>
+                        <p style="margin:0; font-size:14px;">Change the <strong>UI Tab Name</strong> to move the Snapshots panel to a specific location in your N-panel sidebar (e.g., "Pipeline" or "Exploration").</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 4. The Snapshots Sidebar & Creation -->
+        <div style="margin-bottom:40px;">
+            <h2 style="font-size:20px; font-weight:700; color:#1e293b; margin-bottom:16px; display:flex; align-items:center;">
+                <span style="background:#eff6ff; color:#3b82f6; font-size:12px; padding:4px 8px; border-radius:6px; margin-right:12px;">04</span> Capturing &amp; Managing History
+            </h2>
+            <p style="margin-bottom:20px;">Press <strong style="color:#0f172a; border:1px solid #cbd5e1; border-radius:4px; padding:0 4px; font-size:12px;">N</strong> in the 3D Viewport and select the <strong>Snapshots</strong> tab to view your timeline.</p>
+
+            <div style="background-color:#f8fafc; border:1px solid #e2e8f0; border-radius:12px; padding:24px; margin-bottom:24px;">
+                <h3 style="font-size:16px; font-weight:700; color:#0f172a; margin-top:0; margin-bottom:12px;">Creating a Snapshot</h3>
+                <p style="font-size:14px; margin-bottom:16px;">Click <strong>Create Snapshot</strong>. If your file hasn't been saved yet, it will read <strong>Create Snapshot &amp; Save</strong> to initialize the system.</p>
+                
+                <div style="background-color:#ffffff; border-left:4px solid #3b82f6; padding:16px; margin-bottom:16px;">
+                    <strong style="color:#1e40af; display:block; margin-bottom:8px; font-size:14px;">Interactive Thumbnail Crop</strong>
+                    <p style="margin:0; font-size:14px; color:#334155;">When creating a snapshot, check <strong>Capture Thumbnail</strong>. After clicking OK, you will enter an interactive mode in the 3D Viewport. Simply click and drag to draw a square region to establish a precise, cropped visual reference for that specific save state.</p>
+                </div>
+            </div>
+
+            <div style="background-color:#f8fafc; border:1px solid #e2e8f0; border-radius:12px; padding:24px;">
+                <h3 style="font-size:16px; font-weight:700; color:#0f172a; margin-top:0; margin-bottom:12px;">Managing Your Timeline</h3>
+                <ul style="font-size:14px; padding-left:20px; margin-bottom:0; color:#334155;">
+                    <li style="margin-bottom:8px;"><strong>Annotations (Notes):</strong> Click any snapshot to expand it and type detailed notes to track your process.</li>
+                    <li style="margin-bottom:8px;"><strong>Actions (Cog Icon):</strong> Rename descriptions or permanently delete snapshots to keep your list clean.</li>
+                    <li><strong style="color:#0f172a;">View Full Thumbnail:</strong> Under the thumbnail image, click the <strong>View Full Thumbnail</strong> button to pop open a high-resolution version of your capture in Blender's standalone image player.</li>
                 </ul>
             </div>
-
-            <div>
-                <h3 style="font-size:16px; font-weight:600; color:#0f172a; margin-bottom:8px;">3.2 UI Customization</h3>
-                <p>Change the <strong>UI Tab Name</strong> to move the Snapshots panel to a specific location in your N-panel sidebar (e.g., "Pipeline" or "Exploration").</p>
-            </div>
         </div>
 
-        <!-- 4. The Snapshots Sidebar -->
+        <!-- 5. Contextual Editors -->
         <div style="margin-bottom:40px;">
             <h2 style="font-size:20px; font-weight:700; color:#1e293b; margin-bottom:16px; display:flex; align-items:center;">
-                <span style="background:#eff6ff; color:#3b82f6; font-size:12px; padding:4px 8px; border-radius:6px; margin-right:12px;">04</span> The Snapshots Sidebar
+                <span style="background:#eff6ff; color:#3b82f6; font-size:12px; padding:4px 8px; border-radius:6px; margin-right:12px;">05</span> Contextual Editor Integration
             </h2>
-            <p style="margin-bottom:20px;">Press <strong style="color:#0f172a; border:1px solid #cbd5e1; border-radius:4px; padding:0 4px; font-size:12px;">N</strong> in the 3D Viewport and select the <strong>Snapshots</strong> tab.</p>
+            <p style="margin-bottom:20px;">The Snapshots panel dynamically adapts to your workspace, allowing you to create partial snapshots of specific data blocks without saving the entire file.</p>
 
-            <div style="display:block;">
-                <div style="background-color:#f8fafc; border:1px solid #e2e8f0; border-radius:8px; padding:20px; margin-bottom:20px;">
-                    <h3 style="font-size:15px; font-weight:700; color:#0f172a; margin-top:0;">4.1 Creating a Snapshot</h3>
-                    <p style="font-size:14px; margin-bottom:12px;">Click <strong>Create Snapshot</strong>.</p>
-                    <ul style="font-size:14px; padding-left:20px; margin-bottom:0;">
-                        <li style="margin-bottom:8px;"><strong>The First Save:</strong> If your file hasn't been saved yet, the button will read <strong>Create Snapshot &amp; Save</strong>. This initializes the system.</li>
-                        <li><strong>Descriptions:</strong> Use the dialog to add a short description (e.g., "Radical Silhouette Exploration").</li>
-                    </ul>
+            <div style="display:flex; flex-wrap:wrap; margin: -6px;">
+                <div style="flex:1 1 280px; padding:6px; box-sizing:border-box;">
+                    <div style="background-color:#f1f5f9; border:1px solid #e2e8f0; padding:20px; border-radius:8px; height:100%; box-sizing:border-box;">
+                        <h3 style="font-size:15px; font-weight:700; color:#0f172a; margin-top:0; margin-bottom:8px;">Node Editor</h3>
+                        <p style="margin:0; font-size:13px; color:#475569;">When working in the Shader, Geometry Nodes, or Compositor editors, the sidebar adapts to target the active Node Tree. Quickly version-control complex node setups independently of the scene.</p>
+                    </div>
                 </div>
 
-                <div style="background-color:#f8fafc; border:1px solid #e2e8f0; border-radius:8px; padding:20px;">
-                    <h3 style="font-size:15px; font-weight:700; color:#0f172a; margin-top:0;">4.2 Managing Your History</h3>
-                    <p style="font-size:14px; margin-bottom:12px;">Each snapshot is a collapsible container:</p>
-                    <ul style="font-size:14px; padding-left:20px; margin-bottom:0;">
-                        <li style="margin-bottom:8px;"><strong>Annotations (Notes):</strong> Click the snapshot to expand it. Type detailed notes to track your process.</li>
-                        <li><strong>Actions (Cog Icon):</strong> 
-                            <br><span style="color:#64748b; font-size:13px;">• Rename: Update description.</span>
-                            <br><span style="color:#64748b; font-size:13px;">• Delete: Permanently remove the snapshot.</span>
-                        </li>
-                    </ul>
+                <div style="flex:1 1 280px; padding:6px; box-sizing:border-box;">
+                    <div style="background-color:#f1f5f9; border:1px solid #e2e8f0; padding:20px; border-radius:8px; height:100%; box-sizing:border-box;">
+                        <h3 style="font-size:15px; font-weight:700; color:#0f172a; margin-top:0; margin-bottom:8px;">Dopesheet &amp; Graph Editor</h3>
+                        <p style="margin:0; font-size:13px; color:#475569;">In animation editors, the add-on recognizes the active Action data-block. You can snapshot different animation takes, A/B test timing, and instantly restore specific performances.</p>
+                    </div>
                 </div>
             </div>
         </div>
 
-        <!-- 5. Surgical Restoration -->
+        <!-- 6. Surgical Restoration -->
         <div style="margin-bottom:40px;">
             <h2 style="font-size:20px; font-weight:700; color:#1e293b; margin-bottom:16px; display:flex; align-items:center;">
-                <span style="background:#eff6ff; color:#3b82f6; font-size:12px; padding:4px 8px; border-radius:6px; margin-right:12px;">05</span> Surgical Restoration
+                <span style="background:#eff6ff; color:#3b82f6; font-size:12px; padding:4px 8px; border-radius:6px; margin-right:12px;">06</span> Surgical Restoration
             </h2>
             <p style="margin-bottom:24px;">Snapshots allows you to mix and match different versions of your project. You don't always have to revert the whole file; you can pull just the ideas you need.</p>
 
-            <!-- 5.1 -->
             <div style="margin-bottom:24px;">
-                <h3 style="font-size:16px; font-weight:600; color:#0f172a; margin-bottom:12px; padding-bottom:8px; border-bottom:1px solid #f1f5f9;">5.1 Right-Click Context Menus (Property Level)</h3>
+                <h3 style="font-size:16px; font-weight:600; color:#0f172a; margin-bottom:12px; padding-bottom:8px; border-bottom:1px solid #f1f5f9;">6.1 Property-Level Recovery (Right-Click)</h3>
                 <p style="font-size:14px; margin-bottom:12px;">This is the most powerful way to use Snapshots.</p>
                 <ol style="font-size:14px; padding-left:20px; color:#334155;">
                     <li style="margin-bottom:6px;"><strong>Right-click</strong> any field (Roughness, Focal Length, Location, etc.).</li>
                     <li style="margin-bottom:6px;">Select <strong>Restore Property from Snapshot</strong>.</li>
-                    <li>Pick a snapshot from the list. Only that specific value will revert.</li>
+                    <li>Pick a snapshot from the list. Only that specific value (and any attached drivers or keyframes) will revert.</li>
                 </ol>
             </div>
 
-            <!-- 5.2 -->
             <div style="margin-bottom:24px;">
-                <h3 style="font-size:16px; font-weight:600; color:#0f172a; margin-bottom:12px; padding-bottom:8px; border-bottom:1px solid #f1f5f9;">5.2 Component Restoration (Data-Block Level)</h3>
+                <h3 style="font-size:16px; font-weight:600; color:#0f172a; margin-bottom:12px; padding-bottom:8px; border-bottom:1px solid #f1f5f9;">6.2 Component &amp; Data-Block Restoration</h3>
                 <ul style="font-size:14px; padding-left:20px; color:#334155;">
-                    <li style="margin-bottom:8px;"><strong>Materials:</strong> Right-click the material name in the Shader Editor or Properties panel to restore the entire node tree.</li>
+                    <li style="margin-bottom:8px;"><strong>Materials &amp; Node Trees:</strong> Right-click the material name or node group to restore the entire node tree configuration.</li>
                     <li style="margin-bottom:8px;"><strong>Modifiers &amp; Constraints:</strong> Right-click the name of a modifier or constraint in the stack to revert its entire configuration.</li>
-                    <li><strong>Actions:</strong> Restore specific animation takes by right-clicking the Action name in the Action Editor.</li>
+                    <li><strong>Actions:</strong> Restore specific animation takes by right-clicking the Action name.</li>
                 </ul>
             </div>
 
-            <!-- 5.3 -->
             <div>
-                <h3 style="font-size:16px; font-weight:600; color:#0f172a; margin-bottom:12px; padding-bottom:8px; border-bottom:1px solid #f1f5f9;">5.3 Bulk Restoration (Viewport Menu)</h3>
+                <h3 style="font-size:16px; font-weight:600; color:#0f172a; margin-bottom:12px; padding-bottom:8px; border-bottom:1px solid #f1f5f9;">6.3 Bulk Restoration (Viewport Menu)</h3>
                 <p style="font-size:14px; margin-bottom:12px;">Select multiple objects in the 3D Viewport and <strong>Right-click &gt; Restore from Snapshot</strong>.</p>
                 <ul style="font-size:14px; padding-left:20px; color:#334155;">
                     <li style="margin-bottom:8px;"><strong>Restore Data:</strong> Reverts underlying meshes/curves/lights while keeping current positions.</li>
                     <li style="margin-bottom:8px;"><strong>Restore Object Properties:</strong> Reverts transforms (Location, Rotation, Scale).</li>
+                    <li style="margin-bottom:8px;"><strong>Restore Modifiers &amp; Constraints:</strong> Synchronizes entire modifier stacks across multiple objects.</li>
                     <li><strong>Restore Materials:</strong> Reverts all material slot assignments for the selection.</li>
                 </ul>
             </div>
         </div>
 
-        <!-- 6. Recovery -->
+        <!-- 7. Recovery -->
         <div style="margin-bottom:40px;">
             <h2 style="font-size:20px; font-weight:700; color:#1e293b; margin-bottom:16px; display:flex; align-items:center;">
-                <span style="background:#eff6ff; color:#3b82f6; font-size:12px; padding:4px 8px; border-radius:6px; margin-right:12px;">06</span> Recovery &amp; Scene Tools
+                <span style="background:#eff6ff; color:#3b82f6; font-size:12px; padding:4px 8px; border-radius:6px; margin-right:12px;">07</span> Recovery &amp; Scene Tools
             </h2>
             
             <div style="background-color:#f8fafc; border:1px solid #e2e8f0; border-radius:12px; padding:24px; margin-bottom:24px;">
-                <h3 style="font-size:16px; font-weight:700; color:#0f172a; margin-top:0;">6.1 Recover Deleted Data</h3>
-                <p style="font-size:14px; margin-bottom:16px;">If you set aside an idea earlier and want it back:</p>
-                <ol style="font-size:14px; padding-left:20px; margin-bottom:16px;">
-                    <li style="margin-bottom:8px;">Expand a snapshot in the sidebar.</li>
+                <h3 style="font-size:16px; font-weight:700; color:#0f172a; margin-top:0;">7.1 Recover Deleted Data</h3>
+                <p style="font-size:14px; margin-bottom:16px;">If you set aside an idea earlier and deleted it from your scene, you can bring it back:</p>
+                <ol style="font-size:14px; padding-left:20px; margin-bottom:16px; color:#334155;">
+                    <li style="margin-bottom:8px;">Expand a global snapshot in the sidebar.</li>
                     <li style="margin-bottom:8px;">Click <strong>Recover Deleted Data</strong>.</li>
-                    <li style="margin-bottom:8px;">The dialog lists every object or data-block (World, Action, Palette, etc.) present in that snapshot but missing from your current scene.</li>
-                    <li>Select the items and click <strong>OK</strong>.</li>
+                    <li style="margin-bottom:8px;">The system automatically identifies every object or data-block present in the snapshot but missing from your current scene.</li>
+                    <li>Select the items and click <strong>OK</strong>. Objects will be restored into their original collections if available.</li>
                 </ol>
             </div>
 
             <div>
-                <h3 style="font-size:16px; font-weight:600; color:#0f172a; margin-bottom:8px;">6.2 Scene-Level Restoration</h3>
-                <p style="font-size:14px; margin-bottom:12px;">Inside the expanded snapshot panel, use the quick-action buttons to restore:</p>
+                <h3 style="font-size:16px; font-weight:600; color:#0f172a; margin-bottom:12px;">7.2 Scene-Level Restoration</h3>
+                <p style="font-size:14px; margin-bottom:12px;">Inside the expanded snapshot panel, use the quick-action buttons to restore high-level environments:</p>
                 <div style="display:flex; flex-wrap:wrap; margin:-6px;">
                     <div style="padding:6px;">
-                        <span style="display:inline-block; background:#fff; border:1px solid #cbd5e1; padding:6px 12px; border-radius:20px; font-size:12px; color:#0f172a;"><strong>Scene:</strong> Settings &amp; Units</span>
+                        <span style="display:inline-block; background:#ffffff; border:1px solid #cbd5e1; padding:6px 12px; border-radius:20px; font-size:12px; color:#0f172a;"><strong>Scene:</strong> Settings &amp; Render Props</span>
                     </div>
                     <div style="padding:6px;">
-                        <span style="display:inline-block; background:#fff; border:1px solid #cbd5e1; padding:6px 12px; border-radius:20px; font-size:12px; color:#0f172a;"><strong>World:</strong> Lighting &amp; Shaders</span>
+                        <span style="display:inline-block; background:#ffffff; border:1px solid #cbd5e1; padding:6px 12px; border-radius:20px; font-size:12px; color:#0f172a;"><strong>World:</strong> Lighting &amp; Shaders</span>
                     </div>
                     <div style="padding:6px;">
-                        <span style="display:inline-block; background:#fff; border:1px solid #cbd5e1; padding:6px 12px; border-radius:20px; font-size:12px; color:#0f172a;"><strong>View Layer:</strong> Visibility</span>
+                        <span style="display:inline-block; background:#ffffff; border:1px solid #cbd5e1; padding:6px 12px; border-radius:20px; font-size:12px; color:#0f172a;"><strong>View Layer:</strong> Render Passes</span>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- 7. Tech Specs -->
+        <!-- 8. Tech Specs -->
         <div style="margin-bottom:60px;">
             <h2 style="font-size:20px; font-weight:700; color:#1e293b; margin-bottom:16px; display:flex; align-items:center;">
-                <span style="background:#eff6ff; color:#3b82f6; font-size:12px; padding:4px 8px; border-radius:6px; margin-right:12px;">07</span> Technical Compatibility
+                <span style="background:#eff6ff; color:#3b82f6; font-size:12px; padding:4px 8px; border-radius:6px; margin-right:12px;">08</span> Technical Compatibility
             </h2>
             
             <div style="display:flex; flex-wrap:wrap; margin: -6px;">
                 <!-- Card 1 -->
                 <div style="flex:1 1 280px; padding:6px; box-sizing:border-box;">
-                    <div style="background-color:#f1f5f9; padding:12px; border-radius:6px; height:100%; box-sizing:border-box; font-size:13px; color:#334155;">
-                        <strong style="color:#0f172a;">Geometry:</strong><br>
-                        Meshes, Curves, Lattices, Text, Armatures.
+                    <div style="background-color:#f1f5f9; border:1px solid #e2e8f0; padding:16px; border-radius:8px; height:100%; box-sizing:border-box; font-size:13px; color:#334155;">
+                        <strong style="color:#0f172a; display:block; margin-bottom:4px; font-size:14px;">Geometry:</strong>
+                        Meshes, Curves, Lattices, Text, Armatures, and Bones.
                     </div>
                 </div>
 
                 <!-- Card 2 -->
                 <div style="flex:1 1 280px; padding:6px; box-sizing:border-box;">
-                    <div style="background-color:#f1f5f9; padding:12px; border-radius:6px; height:100%; box-sizing:border-box; font-size:13px; color:#334155;">
-                        <strong style="color:#0f172a;">Grease Pencil:</strong><br>
-                        Legacy and Grease Pencil v3.
+                    <div style="background-color:#f1f5f9; border:1px solid #e2e8f0; padding:16px; border-radius:8px; height:100%; box-sizing:border-box; font-size:13px; color:#334155;">
+                        <strong style="color:#0f172a; display:block; margin-bottom:4px; font-size:14px;">Animation:</strong>
+                        Action Datablocks, Drivers, and Keyframed properties.
                     </div>
                 </div>
 
                 <!-- Card 3 -->
                 <div style="flex:1 1 280px; padding:6px; box-sizing:border-box;">
-                    <div style="background-color:#f1f5f9; padding:12px; border-radius:6px; height:100%; box-sizing:border-box; font-size:13px; color:#334155;">
-                        <strong style="color:#0f172a;">Nodes:</strong><br>
-                        Geo Nodes, Shader trees, Compositor.
+                    <div style="background-color:#f1f5f9; border:1px solid #e2e8f0; padding:16px; border-radius:8px; height:100%; box-sizing:border-box; font-size:13px; color:#334155;">
+                        <strong style="color:#0f172a; display:block; margin-bottom:4px; font-size:14px;">Nodes:</strong>
+                        Geometry Nodes, Shader trees, and the Compositor.
                     </div>
                 </div>
 
                 <!-- Card 4 -->
                 <div style="flex:1 1 280px; padding:6px; box-sizing:border-box;">
-                    <div style="background-color:#f1f5f9; padding:12px; border-radius:6px; height:100%; box-sizing:border-box; font-size:13px; color:#334155;">
-                        <strong style="color:#0f172a;">Metadata:</strong><br>
-                        Palettes, Freestyle, Textures.
+                    <div style="background-color:#f1f5f9; border:1px solid #e2e8f0; padding:16px; border-radius:8px; height:100%; box-sizing:border-box; font-size:13px; color:#334155;">
+                        <strong style="color:#0f172a; display:block; margin-bottom:4px; font-size:14px;">Metadata &amp; Misc:</strong>
+                        Grease Pencil, Palettes, and Cameras.
                     </div>
                 </div>
             </div>
