@@ -1,0 +1,187 @@
+<div style="font-family:'Inter', Helvetica, Arial, sans-serif;background:linear-gradient(to bottom, #020617 0%, #0f172a 100%);color:#f8fafc;padding:0;margin:0;line-height:1.6;">
+    <div style="max-width:720px;margin:0 auto;padding:0 12px;">
+        
+        <!-- Hero Section -->
+        <div style="position:relative;overflow:hidden;padding:50px 0 40px 0;text-align:center;">
+            
+            <h1 style="font-weight:800;margin-top:0;margin-bottom:20px;letter-spacing:-1px;color:#ffffff;line-height:1.1;font-size:42px;">
+                Automaton <span style="color:#22d3ee;">Rules Engine</span>
+            </h1>
+            <p style="margin:0 auto;color:#94a3b8;font-weight:300;line-height:1.5;padding:0 20px;font-size:16px;max-width:580px;">
+                Bind Python scripts to Blender events. Automate your studio's workflow with a robust, context-aware engine that executes tasks exactly when and where they are needed.
+            </p>
+        </div>
+
+        <!-- Triggers Section -->
+        <div style="margin-bottom:80px;">
+            <div style="text-align:center;margin-bottom:30px;">
+                <h2 style="font-size:28px;font-weight:700;margin-bottom:10px;color:#ffffff;">Event-Driven Execution</h2>
+                <p style="margin:0;color:#94a3b8;font-size:15px;">Hook into nearly 30 internal Blender application handlers.</p>
+            </div>
+
+            <div style="display:block;">
+                <!-- Trigger 1 -->
+                <div style="background:linear-gradient(to right, rgba(148, 163, 184, 0.12), transparent);border-left:4px solid #94a3b8;padding:24px;border-radius:0 12px 12px 0;margin-bottom:12px;">
+                    <h3 style="color:#cbd5e1;margin:0 0 8px 0;letter-spacing:0.5px;font-size:14px;font-weight:700;">FILE I/O OPERATIONS</h3>
+                    <p style="margin:0;color:#cbd5e1;font-size:13px;line-height:1.6;">
+                        Trigger scripts <strong style="color:#ffffff;">Before/After Save</strong>, <strong style="color:#ffffff;">Load</strong>, or <strong style="color:#ffffff;">Import</strong>. Automatically sanitize rigs before saving, or validate naming conventions the moment an asset is imported.
+                    </p>
+                </div>
+                
+                <!-- Trigger 2 -->
+                <div style="background:linear-gradient(to right, rgba(45, 212, 191, 0.12), transparent);border-left:4px solid #2dd4bf;padding:24px;border-radius:0 12px 12px 0;margin-bottom:12px;">
+                    <h3 style="color:#2dd4bf;margin:0 0 8px 0;letter-spacing:0.5px;font-size:14px;font-weight:700;">RENDER & BAKE PIPELINE</h3>
+                    <p style="margin:0;color:#cbd5e1;font-size:13px;line-height:1.6;">
+                        Execute tasks on <strong style="color:#ffffff;">Render Init</strong>, <strong style="color:#ffffff;">Render Complete</strong>, or <strong style="color:#ffffff;">Object Bake</strong>. Update output paths dynamically or notify your team's chat platform when a heavy render finishes.
+                    </p>
+                </div>
+
+                <!-- Trigger 3 -->
+                <div style="background:linear-gradient(to right, rgba(56, 189, 248, 0.12), transparent);border-left:4px solid #38bdf8;padding:24px;border-radius:0 12px 12px 0;margin-bottom:24px;">
+                    <h3 style="color:#38bdf8;margin:0 0 8px 0;letter-spacing:0.5px;font-size:14px;font-weight:700;">SCENE & TIME UPDATES</h3>
+                    <p style="margin:0;color:#cbd5e1;font-size:13px;line-height:1.6;">
+                        React to <strong style="color:#ffffff;">Frame Changes</strong>, <strong style="color:#ffffff;">Depsgraph Updates</strong>, or <strong style="color:#ffffff;">Animation Playback</strong>. Drive complex custom logic that standard drivers can't handle.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Precision Scoping -->
+        <div style="margin-bottom:80px;">
+            <div style="text-align:center;margin-bottom:30px;">
+                <h2 style="font-size:28px;font-weight:700;margin-bottom:10px;color:#ffffff;">Precision Scoping</h2>
+                <p style="margin:0;color:#94a3b8;font-size:15px;">Scripts only run exactly where they are allowed to.</p>
+            </div>
+            
+            <div style="display:flex;flex-wrap:wrap;margin:0 -6px;">
+                <!-- Concept 1: Directory Scope -->
+                <div style="flex:1 1 280px;background-color:#1e293b;border:1px solid rgba(255, 255, 255, 0.05);padding:24px;border-radius:16px;margin:6px;">
+                    <div style="width:40px;height:40px;background:rgba(168, 85, 247, 0.1);border-radius:10px;display:flex;align-items:center;justify-content:center;margin-bottom:16px;color:#a855f7;font-size:20px;">
+                        ⊞
+                    </div>
+                    <h4 style="color:#ffffff;margin-top:0;margin-bottom:8px;font-size:15px;font-weight:600;">Directory Scope</h4>
+                    <p style="color:#94a3b8;font-size:13px;line-height:1.6;margin:0;">
+                        Use wildcards to restrict scripts to specific project folders. Tell a script to only execute if the currently opened `.blend` file lives inside the <code style="color:#cbd5e1;">//assets/</code> directory.
+                    </p>
+                </div>
+
+                <!-- Concept 2: File Filters -->
+                <div style="flex:1 1 280px;background-color:#1e293b;border:1px solid rgba(255, 255, 255, 0.05);padding:24px;border-radius:16px;margin:6px;">
+                    <div style="width:40px;height:40px;background:rgba(34, 211, 238, 0.1);border-radius:10px;display:flex;align-items:center;justify-content:center;margin-bottom:16px;color:#22d3ee;font-size:20px;">
+                        ⋈
+                    </div>
+                    <h4 style="color:#ffffff;margin-top:0;margin-bottom:8px;font-size:15px;font-weight:600;">File Filters</h4>
+                    <p style="color:#94a3b8;font-size:13px;line-height:1.6;margin:0;">
+                        Include or exclude specific file names. Ensure your automated lighting setup script only triggers on files matching <code style="color:#22d3ee;">shot_*.blend</code> and skips work-in-progress files.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Production Safeguards -->
+        <div style="margin-bottom:80px;">
+            <div style="text-align:center;margin-bottom:30px;">
+                <h2 style="font-size:28px;font-weight:700;margin-bottom:10px;color:#ffffff;">Production Safeguards</h2>
+                <p style="margin:0;color:#94a3b8;font-size:15px;">Keep automation helpful, not annoying.</p>
+            </div>
+            
+            <div style="display:block;">
+                <!-- Guard 1 -->
+                <div style="background-color:rgba(30, 41, 59, 0.4);border:1px solid rgba(255, 255, 255, 0.05);padding:20px;border-radius:16px;display:flex;flex-wrap:wrap;align-items:flex-start;margin-bottom:12px;">
+                    <div style="flex:1 0 160px;margin-bottom:8px;">
+                        <div style="display:flex;align-items:center;">
+                            <span style="color:#2dd4bf;font-size:18px;margin-right:10px;">⏱</span>
+                            <span style="color:#ffffff;font-weight:600;font-size:15px;">Smart Cooldowns</span>
+                        </div>
+                    </div>
+                    <div style="flex:10 1 240px;color:#94a3b8;font-size:13px;line-height:1.6;">
+                        Prevent heavy scripts from running constantly. Set an hourly cooldown, or restrict a script to run exactly <strong>Once Per Session</strong> until Blender is restarted.
+                    </div>
+                </div>
+
+                <!-- Guard 2 -->
+                <div style="background-color:rgba(30, 41, 59, 0.4);border:1px solid rgba(255, 255, 255, 0.05);padding:20px;border-radius:16px;display:flex;flex-wrap:wrap;align-items:flex-start;margin-bottom:12px;">
+                    <div style="flex:1 0 160px;margin-bottom:8px;">
+                        <div style="display:flex;align-items:center;">
+                            <span style="color:#2dd4bf;font-size:18px;margin-right:10px;">◈</span>
+                            <span style="color:#ffffff;font-weight:600;font-size:15px;">Local Overrides</span>
+                        </div>
+                    </div>
+                    <div style="flex:10 1 240px;color:#94a3b8;font-size:13px;line-height:1.6;">
+                        Sometimes a specific shot requires breaking the rules. Artists can easily <strong>disable global rules locally</strong> from the N-Panel without affecting the rest of the project.
+                    </div>
+                </div>
+
+                <!-- Guard 3 -->
+                <div style="background-color:rgba(30, 41, 59, 0.4);border:1px solid rgba(255, 255, 255, 0.05);padding:20px;border-radius:16px;display:flex;flex-wrap:wrap;align-items:flex-start;">
+                     <div style="flex:1 0 160px;margin-bottom:8px;">
+                        <div style="display:flex;align-items:center;">
+                            <span style="color:#2dd4bf;font-size:18px;margin-right:10px;">◎</span>
+                            <span style="color:#ffffff;font-weight:600;font-size:15px;">Dry Run Scanning</span>
+                        </div>
+                    </div>
+                    <div style="flex:10 1 240px;color:#94a3b8;font-size:13px;line-height:1.6;">
+                        Unsure if your wildcards are correct? Use the <strong>Dry Run</strong> feature to rapidly scan your entire project hierarchy and print a list of every `.blend` file that matches your criteria.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Built for Teams -->
+        <div style="margin-bottom:80px;">
+            <div style="background:linear-gradient(180deg, #1e293b 0%, #0f172a 100%);border:1px solid rgba(34, 211, 238, 0.2);padding:24px;border-radius:24px;">
+                <div style="text-align:center;margin-bottom:24px;">
+                    <h2 style="font-size:24px;font-weight:700;color:#ffffff;margin-bottom:12px;">Built for Teams</h2>
+                    <p style="color:#cbd5e1;font-size:14px;line-height:1.6;margin:0;max-width:580px;margin-left:auto;margin-right:auto;">
+                        Automaton saves its configurations directly inside your scripts directory as <code style="color:#22d3ee;">automaton_config.json</code>. 
+                        Sync this file via any distributed file system or network drive alongside your python scripts, and your entire team's rule-set updates instantly across the studio.
+                    </p>
+                </div>
+                
+                <div style="display:flex;flex-wrap:wrap;margin:0 -6px;justify-content:center;">
+                    <div style="flex:0 1 auto;margin:6px;background:rgba(15, 23, 42, 0.5);border:1px solid rgba(255,255,255,0.05);border-radius:12px;padding:12px 20px;">
+                        <div style="color:#f8fafc;font-size:13px;font-weight:600;display:flex;align-items:center;">
+                            <span style="color:#22c55e;margin-right:8px;">✓</span> Auto-detects Kitsu Projects
+                        </div>
+                    </div>
+                    <div style="flex:0 1 auto;margin:6px;background:rgba(15, 23, 42, 0.5);border:1px solid rgba(255,255,255,0.05);border-radius:12px;padding:12px 20px;">
+                        <div style="color:#f8fafc;font-size:13px;font-weight:600;display:flex;align-items:center;">
+                            <span style="color:#22c55e;margin-right:8px;">✓</span> Multiple Project Contexts
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Quote Section -->
+        <div style="margin-bottom:60px;text-align:center;padding:0 20px;">
+            <blockquote style="margin:0 auto;max-width:500px;font-size:17px;font-weight:300;color:#f8fafc;font-style:italic;line-height:1.5;">
+                <span style="color:#22d3ee;font-size:20px;margin-right:2px;">&ldquo;</span>Stop relying on artists to remember manual steps.<span style="color:#22d3ee;font-size:20px;margin-left:2px;">&rdquo;</span>
+            </blockquote>
+        </div>
+
+        <!-- Action Links Section -->
+        <div style="margin-bottom:60px;display:flex;flex-wrap:wrap;margin-left:-6px;margin-right:-6px;justify-content:center;align-items:center;">
+            <div style="margin:6px;flex:0 1 auto;">
+                <a href="https://superhivemarket.com/creators/blenderaddon" target="_blank" style="display:inline-block;padding:12px 24px;background-color:rgba(30, 41, 59, 0.4);border:1px solid rgba(255, 255, 255, 0.1);border-radius:99px;color:#94a3b8;text-decoration:none;font-size:13px;font-weight:600;">
+                     See More From This Creator
+                </a>
+            </div>
+            <div style="margin:6px;flex:0 1 auto;">
+                <a href="https://blenderaddon.com/" target="_blank" style="display:inline-block;padding:12px 24px;background-color:rgba(30, 41, 59, 0.4);border:1px solid rgba(34, 211, 238, 0.3);border-radius:99px;color:#22d3ee;text-decoration:none;font-size:13px;font-weight:600;">
+                     Alternative: Buy on Gumroad
+                </a>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div style="text-align:center;padding:40px 0;color:#475569;font-size:11px;border-top:1px solid #1e293b;opacity:0.6;">
+            <p style="margin:0 0 12px 0;font-weight:600;color:#cbd5e1;">Automate your studio's Blender pipeline</p>
+            <div style="display:block;margin-bottom:16px;">
+                <span style="color:#94a3b8;font-size:10px;letter-spacing:1px;margin:0 8px;display:inline-block;">GPL-3.0</span> 
+                <span style="color:#94a3b8;font-size:10px;letter-spacing:1px;margin:0 8px;display:inline-block;">BLENDER 4.2+</span>
+            </div>
+            <p>© 2026 Daniel Salazar</p>
+        </div>
+    </div>
+</div>
