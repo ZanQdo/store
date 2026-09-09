@@ -1,7 +1,7 @@
 <div style="font-family:'Inter', Helvetica, Arial, sans-serif; background-color:#ffffff; color:#475569; padding:0; margin:0; line-height:1.6; -webkit-font-smoothing: antialiased;">
     <div style="max-width:720px; margin:0 auto; padding:40px 20px;">
         
-        <!-- Header (Rule 4: Responsive Split Title) -->
+        <!-- Header -->
         <div style="border-bottom:1px solid #e2e8f0; padding-bottom:24px; margin-bottom:40px;">
             <h1 style="font-weight:800; color:#0f172a; margin:0 0 8px 0; letter-spacing:-1px; font-size:32px; display:flex; flex-wrap:wrap;">
                 <span style="white-space:nowrap; margin-right:8px;">Snapshots</span>
@@ -16,7 +16,7 @@
                 <span style="background:#eff6ff; color:#3b82f6; font-size:12px; padding:4px 8px; border-radius:6px; margin-right:12px;">01</span> Introduction
             </h2>
             <p style="margin-bottom:16px;">
-                Welcome to <strong style="color:#0f172a;">Snapshots</strong>, a professional version-control workflow for Blender. Snapshots is designed to liberate your creative process by removing the fear of commitment. By creating non-linear "checkpoints" in your work, you can explore radical creative tangents, A/B test lighting setups, and prototype complex procedural systems, all while knowing your primary vision is safe and restorable with surgical precision.
+                Welcome to <strong style="color:#0f172a;">Snapshots</strong>, a professional version-control workflow for Blender. Snapshots is designed to liberate your creative process by removing the fear of commitment. By creating non-linear "checkpoints" in your work, you can explore radical creative tangents, A/B test lighting setups, prototype complex procedural systems, and compare animation takes using Ghost Curves, all while knowing your primary vision is safe and restorable with surgical precision.
             </p>
         </div>
 
@@ -48,7 +48,7 @@
                 <div style="flex:1 1 280px; padding:6px; box-sizing:border-box;">
                     <div style="background-color:#ffffff; border:1px solid #e2e8f0; padding:20px; border-radius:8px; height:100%; box-sizing:border-box;">
                         <h3 style="font-size:15px; font-weight:700; color:#0f172a; margin-top:0; margin-bottom:8px;">Global Snapshots Directory</h3>
-                        <p style="margin-bottom:12px; font-size:14px;">By default, Snapshots are saved relative to your project. Set a global directory to centralize backups to a secondary drive or network server, which is ideal for studio environments.</p>
+                        <p style="margin-bottom:12px; font-size:14px;">By default, Snapshots are saved relative to your project in a hidden folder. Set a global directory to centralize backups to a secondary drive or network server, which is ideal for studio environments.</p>
                     </div>
                 </div>
 
@@ -56,7 +56,7 @@
                 <div style="flex:1 1 280px; padding:6px; box-sizing:border-box;">
                     <div style="background-color:#ffffff; border:1px solid #e2e8f0; padding:20px; border-radius:8px; height:100%; box-sizing:border-box;">
                         <h3 style="font-size:15px; font-weight:700; color:#0f172a; margin-top:0; margin-bottom:8px;">UI Tab Customization</h3>
-                        <p style="margin:0; font-size:14px;">Change the <strong>UI Tab Name</strong> to move the Snapshots panel to a specific location in your N-panel sidebar (e.g., "Pipeline" or "Exploration").</p>
+                        <p style="margin:0; font-size:14px;">Change the <strong>UI Tab Name</strong> to move the Snapshots panel to a specific location in your N-panel sidebar (e.g., "Pipeline" or "Exploration") across all editors.</p>
                     </div>
                 </div>
             </div>
@@ -67,24 +67,25 @@
             <h2 style="font-size:20px; font-weight:700; color:#1e293b; margin-bottom:16px; display:flex; align-items:center;">
                 <span style="background:#eff6ff; color:#3b82f6; font-size:12px; padding:4px 8px; border-radius:6px; margin-right:12px;">04</span> Capturing &amp; Managing History
             </h2>
-            <p style="margin-bottom:20px;">Press <strong style="color:#0f172a; border:1px solid #cbd5e1; border-radius:4px; padding:0 4px; font-size:12px;">N</strong> in the 3D Viewport and select the <strong>Snapshots</strong> tab to view your timeline.</p>
+            <p style="margin-bottom:20px;">Press <strong style="color:#0f172a; border:1px solid #cbd5e1; border-radius:4px; padding:0 4px; font-size:12px;">N</strong> in the 3D Viewport or any major editor to access the <strong>Snapshots</strong> tab.</p>
 
             <div style="background-color:#f8fafc; border:1px solid #e2e8f0; border-radius:12px; padding:24px; margin-bottom:24px;">
                 <h3 style="font-size:16px; font-weight:700; color:#0f172a; margin-top:0; margin-bottom:12px;">Creating a Snapshot</h3>
-                <p style="font-size:14px; margin-bottom:16px;">Click <strong>Create Snapshot</strong>. If your file hasn't been saved yet, it will read <strong>Create Snapshot &amp; Save</strong> to initialize the system.</p>
+                <p style="font-size:14px; margin-bottom:16px;">Click <strong>Create Snapshot</strong>. If your file hasn't been saved yet, it will prompt you to save first to initialize the system.</p>
                 
                 <div style="background-color:#ffffff; border-left:4px solid #3b82f6; padding:16px; margin-bottom:16px;">
-                    <strong style="color:#1e40af; display:block; margin-bottom:8px; font-size:14px;">Interactive Thumbnail Crop</strong>
-                    <p style="margin:0; font-size:14px; color:#334155;">When creating a snapshot, check <strong>Capture Thumbnail</strong>. After clicking OK, you will enter an interactive mode in the 3D Viewport. Simply click and drag to draw a square region to establish a precise, cropped visual reference for that specific save state.</p>
+                    <strong style="color:#1e40af; display:block; margin-bottom:8px; font-size:14px;">Interactive Thumbnails</strong>
+                    <p style="margin:0; font-size:14px; color:#334155;">When creating a snapshot, check <strong>Capture Thumbnail</strong>. Click and drag in the UI to draw a region; it will automatically be cropped, padded to a square, and saved as a lightweight, high-quality image to keep your project folder small while giving you a clear visual reference.</p>
                 </div>
             </div>
 
             <div style="background-color:#f8fafc; border:1px solid #e2e8f0; border-radius:12px; padding:24px;">
-                <h3 style="font-size:16px; font-weight:700; color:#0f172a; margin-top:0; margin-bottom:12px;">Managing Your Timeline</h3>
+                <h3 style="font-size:16px; font-weight:700; color:#0f172a; margin-top:0; margin-bottom:12px;">Managing Your Snapshot</h3>
                 <ul style="font-size:14px; padding-left:20px; margin-bottom:0; color:#334155;">
                     <li style="margin-bottom:8px;"><strong>Annotations (Notes):</strong> Click any snapshot to expand it and type detailed notes to track your process.</li>
-                    <li style="margin-bottom:8px;"><strong>Actions (Cog Icon):</strong> Rename descriptions or permanently delete snapshots to keep your list clean.</li>
-                    <li><strong style="color:#0f172a;">View Full Thumbnail:</strong> Under the thumbnail image, click the <strong>View Full Thumbnail</strong> button to pop open a high-resolution version of your capture in Blender's standalone image player.</li>
+                    <li style="margin-bottom:8px;"><strong>Renaming:</strong> Double-click a snapshot's name in the UI list to instantly rename it.</li>
+                    <li style="margin-bottom:8px;"><strong>Recapture:</strong> Use the camera icon in the snapshot details to recapture the thumbnail at any time.</li>
+                    <li><strong style="color:#0f172a;">View Full Thumbnail:</strong> Click the expand button to pop open a high-resolution version of your capture in Blender's standalone image player.</li>
                 </ul>
             </div>
         </div>
@@ -94,20 +95,20 @@
             <h2 style="font-size:20px; font-weight:700; color:#1e293b; margin-bottom:16px; display:flex; align-items:center;">
                 <span style="background:#eff6ff; color:#3b82f6; font-size:12px; padding:4px 8px; border-radius:6px; margin-right:12px;">05</span> Contextual Editor Integration
             </h2>
-            <p style="margin-bottom:20px;">The Snapshots panel dynamically adapts to your workspace, allowing you to create partial snapshots of specific data blocks without saving the entire file.</p>
+            <p style="margin-bottom:20px;">The Snapshots panel dynamically adapts to your workspace, allowing you to create partial snapshots of specific data blocks (like an Action or a Node Tree) without saving the entire file.</p>
 
             <div style="display:flex; flex-wrap:wrap; margin: -6px;">
                 <div style="flex:1 1 280px; padding:6px; box-sizing:border-box;">
                     <div style="background-color:#f1f5f9; border:1px solid #e2e8f0; padding:20px; border-radius:8px; height:100%; box-sizing:border-box;">
-                        <h3 style="font-size:15px; font-weight:700; color:#0f172a; margin-top:0; margin-bottom:8px;">Node Editor</h3>
-                        <p style="margin:0; font-size:13px; color:#475569;">When working in the Shader, Geometry Nodes, or Compositor editors, the sidebar adapts to target the active Node Tree. Quickly version-control complex node setups independently of the scene.</p>
+                        <h3 style="font-size:15px; font-weight:700; color:#0f172a; margin-top:0; margin-bottom:8px;">Node &amp; Properties Editors</h3>
+                        <p style="margin:0; font-size:13px; color:#475569;">When working in the Properties panel or Node Editor (Shader, Geometry Nodes, Compositor), the sidebar adapts to target the active data. Quickly version-control complex setups independently of the main scene.</p>
                     </div>
                 </div>
 
                 <div style="flex:1 1 280px; padding:6px; box-sizing:border-box;">
                     <div style="background-color:#f1f5f9; border:1px solid #e2e8f0; padding:20px; border-radius:8px; height:100%; box-sizing:border-box;">
                         <h3 style="font-size:15px; font-weight:700; color:#0f172a; margin-top:0; margin-bottom:8px;">Dopesheet &amp; Graph Editor</h3>
-                        <p style="margin:0; font-size:13px; color:#475569;">In animation editors, the add-on recognizes the active Action data-block. You can snapshot different animation takes, A/B test timing, and instantly restore specific performances.</p>
+                        <p style="margin:0; font-size:13px; color:#475569;">In animation editors, the add-on recognizes the active Action data-block. Snapshot different animation takes, compare them visually using Ghost Curves, and surgically restore specific channels or bones.</p>
                     </div>
                 </div>
             </div>
@@ -124,29 +125,38 @@
                 <h3 style="font-size:16px; font-weight:600; color:#0f172a; margin-bottom:12px; padding-bottom:8px; border-bottom:1px solid #f1f5f9;">6.1 Property-Level Recovery (Right-Click)</h3>
                 <p style="font-size:14px; margin-bottom:12px;">This is the most powerful way to use Snapshots.</p>
                 <ol style="font-size:14px; padding-left:20px; color:#334155;">
-                    <li style="margin-bottom:6px;"><strong>Right-click</strong> any field (Roughness, Focal Length, Location, etc.).</li>
+                    <li style="margin-bottom:6px;"><strong>Right-click</strong> almost any field (Roughness, Location, custom Geometry Node inputs, etc.).</li>
                     <li style="margin-bottom:6px;">Select <strong>Restore Property from Snapshot</strong>.</li>
-                    <li>Pick a snapshot from the list. Only that specific value (and any attached drivers or keyframes) will revert.</li>
+                    <li>Pick a snapshot from the list. The specific value—along with any attached Drivers, F-Curves, or keyframes—will be safely restored.</li>
                 </ol>
             </div>
 
             <div style="margin-bottom:24px;">
-                <h3 style="font-size:16px; font-weight:600; color:#0f172a; margin-bottom:12px; padding-bottom:8px; border-bottom:1px solid #f1f5f9;">6.2 Component &amp; Data-Block Restoration</h3>
+                <h3 style="font-size:16px; font-weight:600; color:#0f172a; margin-bottom:12px; padding-bottom:8px; border-bottom:1px solid #f1f5f9;">6.2 Component &amp; Node Tree Restoration</h3>
                 <ul style="font-size:14px; padding-left:20px; color:#334155;">
-                    <li style="margin-bottom:8px;"><strong>Materials &amp; Node Trees:</strong> Right-click the material name or node group to restore the entire node tree configuration.</li>
-                    <li style="margin-bottom:8px;"><strong>Modifiers &amp; Constraints:</strong> Right-click the name of a modifier or constraint in the stack to revert its entire configuration.</li>
-                    <li><strong>Actions:</strong> Restore specific animation takes by right-clicking the Action name.</li>
+                    <li style="margin-bottom:8px;"><strong>Materials &amp; Compositing:</strong> Right-click a material name or a Compositor Effect layer to restore its entire configuration and nested node trees.</li>
+                    <li style="margin-bottom:8px;"><strong>Modifiers &amp; Constraints:</strong> Right-click the name of a modifier or constraint in the stack to revert it. If a modifier contains an embedded Geometry Node tree, it will be mapped correctly.</li>
+                </ul>
+            </div>
+
+            <div style="margin-bottom:24px;">
+                <h3 style="font-size:16px; font-weight:600; color:#0f172a; margin-bottom:12px; padding-bottom:8px; border-bottom:1px solid #f1f5f9;">6.3 Animation &amp; Ghost Curves</h3>
+                <p style="font-size:14px; margin-bottom:12px;">In the <strong>Graph Editor</strong>, <strong>Dopesheet</strong>, or the Object Properties panel, you gain fine-grained control over animation history:</p>
+                <ul style="font-size:14px; padding-left:20px; color:#334155;">
+                    <li style="margin-bottom:8px;"><strong>Ghost Curves (Graph Editor):</strong> Click the ghost icon next to a restore button to project the snapshot's animation data into your viewport as background ghost curves. Compare timing and spacing without overwriting your current work!</li>
+                    <li style="margin-bottom:8px;"><strong>Restore Selected Bones:</strong> In Pose Mode, select specific bones and restore *only* their animation channels from a previous take.</li>
+                    <li><strong>Restore Selected Channels:</strong> Highlight specific F-Curves (like Z-Rotation) in the Graph Editor and restore only those targeted tracks from a snapshot.</li>
                 </ul>
             </div>
 
             <div>
-                <h3 style="font-size:16px; font-weight:600; color:#0f172a; margin-bottom:12px; padding-bottom:8px; border-bottom:1px solid #f1f5f9;">6.3 Bulk Restoration (Viewport Menu)</h3>
+                <h3 style="font-size:16px; font-weight:600; color:#0f172a; margin-bottom:12px; padding-bottom:8px; border-bottom:1px solid #f1f5f9;">6.4 Bulk Restoration (Viewport Menu)</h3>
                 <p style="font-size:14px; margin-bottom:12px;">Select multiple objects in the 3D Viewport and <strong>Right-click &gt; Restore from Snapshot</strong>.</p>
                 <ul style="font-size:14px; padding-left:20px; color:#334155;">
-                    <li style="margin-bottom:8px;"><strong>Restore Data:</strong> Reverts underlying meshes/curves/lights while keeping current positions.</li>
+                    <li style="margin-bottom:8px;"><strong>Restore Data:</strong> Reverts underlying meshes/curves/lights while keeping current object positions.</li>
                     <li style="margin-bottom:8px;"><strong>Restore Object Properties:</strong> Reverts transforms (Location, Rotation, Scale).</li>
-                    <li style="margin-bottom:8px;"><strong>Restore Modifiers &amp; Constraints:</strong> Synchronizes entire modifier stacks across multiple objects.</li>
-                    <li><strong>Restore Materials:</strong> Reverts all material slot assignments for the selection.</li>
+                    <li style="margin-bottom:8px;"><strong>Restore Modifiers &amp; Constraints:</strong> Synchronizes entire modifier stacks across multiple objects, including embedded Node Trees.</li>
+                    <li><strong>Restore Materials &amp; Actions:</strong> Reverts material slot assignments and active Action datablocks for the entire selection.</li>
                 </ul>
             </div>
         </div>
@@ -157,20 +167,20 @@
                 <span style="background:#eff6ff; color:#3b82f6; font-size:12px; padding:4px 8px; border-radius:6px; margin-right:12px;">07</span> Recovery &amp; Scene Tools
             </h2>
             
-            <div style="background-color:#f8fafc; border:1px solid #e2e8f0; border-radius:12px; padding:24px; margin-bottom:24px;">
-                <h3 style="font-size:16px; font-weight:700; color:#0f172a; margin-top:0;">7.1 Recover Deleted Data</h3>
-                <p style="font-size:14px; margin-bottom:16px;">If you set aside an idea earlier and deleted it from your scene, you can bring it back:</p>
+            <div style="margin-bottom:24px;">
+                <h3 style="font-size:16px; font-weight:600; color:#0f172a; margin-bottom:12px;">7.1 Recover Deleted Data</h3>
+                <p style="font-size:14px; margin-bottom:12px;">If you set aside an idea earlier and deleted it from your scene, you can bring it back seamlessly:</p>
                 <ol style="font-size:14px; padding-left:20px; margin-bottom:16px; color:#334155;">
                     <li style="margin-bottom:8px;">Expand a global snapshot in the sidebar.</li>
                     <li style="margin-bottom:8px;">Click <strong>Recover Deleted Data</strong>.</li>
-                    <li style="margin-bottom:8px;">The system automatically identifies every object or data-block present in the snapshot but missing from your current scene.</li>
-                    <li>Select the items and click <strong>OK</strong>. Objects will be restored into their original collections if available.</li>
+                    <li style="margin-bottom:8px;">The system intelligently identifies every object or data-block present in the snapshot but missing from your current file.</li>
+                    <li>Select the items and click <strong>OK</strong>. Objects will be automatically linked back into their original collections if they still exist.</li>
                 </ol>
             </div>
 
             <div>
                 <h3 style="font-size:16px; font-weight:600; color:#0f172a; margin-bottom:12px;">7.2 Scene-Level Restoration</h3>
-                <p style="font-size:14px; margin-bottom:12px;">Inside the expanded snapshot panel, use the quick-action buttons to restore high-level environments:</p>
+                <p style="font-size:14px; margin-bottom:12px;">Inside the expanded global snapshot panel, use the quick-action buttons to instantly restore high-level environments:</p>
                 <div style="display:flex; flex-wrap:wrap; margin:-6px;">
                     <div style="padding:6px;">
                         <span style="display:inline-block; background:#ffffff; border:1px solid #cbd5e1; padding:6px 12px; border-radius:20px; font-size:12px; color:#0f172a;"><strong>Scene:</strong> Settings &amp; Render Props</span>
@@ -180,6 +190,9 @@
                     </div>
                     <div style="padding:6px;">
                         <span style="display:inline-block; background:#ffffff; border:1px solid #cbd5e1; padding:6px 12px; border-radius:20px; font-size:12px; color:#0f172a;"><strong>View Layer:</strong> Render Passes</span>
+                    </div>
+                    <div style="padding:6px;">
+                        <span style="display:inline-block; background:#ffffff; border:1px solid #cbd5e1; padding:6px 12px; border-radius:20px; font-size:12px; color:#0f172a;"><strong>Compositor:</strong> Layered Effects</span>
                     </div>
                 </div>
             </div>
@@ -204,7 +217,7 @@
                 <div style="flex:1 1 280px; padding:6px; box-sizing:border-box;">
                     <div style="background-color:#f1f5f9; border:1px solid #e2e8f0; padding:16px; border-radius:8px; height:100%; box-sizing:border-box; font-size:13px; color:#334155;">
                         <strong style="color:#0f172a; display:block; margin-bottom:4px; font-size:14px;">Animation:</strong>
-                        Action Datablocks, Drivers, and Keyframed properties.
+                        Action Datablocks, Drivers, Keyframes, Modifiers, and Ghost Curves.
                     </div>
                 </div>
 
@@ -212,7 +225,7 @@
                 <div style="flex:1 1 280px; padding:6px; box-sizing:border-box;">
                     <div style="background-color:#f1f5f9; border:1px solid #e2e8f0; padding:16px; border-radius:8px; height:100%; box-sizing:border-box; font-size:13px; color:#334155;">
                         <strong style="color:#0f172a; display:block; margin-bottom:4px; font-size:14px;">Nodes:</strong>
-                        Geometry Nodes, Shader trees, and the Compositor.
+                        Geometry Nodes, Shader trees, and Layered Compositor Effects.
                     </div>
                 </div>
 
