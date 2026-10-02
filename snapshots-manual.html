@@ -43,21 +43,17 @@
             </h2>
             <p style="margin-bottom:20px; font-size:14px; color:#64748b;">Access these settings in <strong>Edit &gt; Preferences &gt; Add-ons &gt; Snapshots</strong>.</p>
             
-            <div style="display:flex; flex-wrap:wrap; margin: -6px;">
+            <div style="display:flex; flex-wrap:wrap; margin:-6px;">
                 <!-- 3.1 Global Directory -->
-                <div style="flex:1 1 280px; padding:6px; box-sizing:border-box;">
-                    <div style="background-color:#ffffff; border:1px solid #e2e8f0; padding:20px; border-radius:8px; height:100%; box-sizing:border-box;">
-                        <h3 style="font-size:15px; font-weight:700; color:#0f172a; margin-top:0; margin-bottom:8px;">Global Snapshots Directory</h3>
-                        <p style="margin-bottom:12px; font-size:14px;">By default, Snapshots are saved relative to your project in a hidden folder. Set a global directory to centralize backups to a secondary drive or network server, which is ideal for studio environments.</p>
-                    </div>
+                <div style="flex:1 1 280px; margin:6px; background-color:#ffffff; border:1px solid #e2e8f0; padding:20px; border-radius:8px; box-sizing:border-box;">
+                    <h3 style="font-size:15px; font-weight:700; color:#0f172a; margin-top:0; margin-bottom:8px;">Global Snapshots Directory</h3>
+                    <p style="margin-bottom:0; font-size:14px;">By default, Snapshots are saved relative to your project in a hidden folder. Set a global directory to centralize backups to a secondary drive or network server, which is ideal for studio environments.</p>
                 </div>
 
                 <!-- 3.2 UI Customization -->
-                <div style="flex:1 1 280px; padding:6px; box-sizing:border-box;">
-                    <div style="background-color:#ffffff; border:1px solid #e2e8f0; padding:20px; border-radius:8px; height:100%; box-sizing:border-box;">
-                        <h3 style="font-size:15px; font-weight:700; color:#0f172a; margin-top:0; margin-bottom:8px;">UI Tab Customization</h3>
-                        <p style="margin:0; font-size:14px;">Change the <strong>UI Tab Name</strong> to move the Snapshots panel to a specific location in your N-panel sidebar (e.g., "Pipeline" or "Exploration") across all editors.</p>
-                    </div>
+                <div style="flex:1 1 280px; margin:6px; background-color:#ffffff; border:1px solid #e2e8f0; padding:20px; border-radius:8px; box-sizing:border-box;">
+                    <h3 style="font-size:15px; font-weight:700; color:#0f172a; margin-top:0; margin-bottom:8px;">UI Tab Customization</h3>
+                    <p style="margin:0; font-size:14px;">Change the <strong>UI Tab Name</strong> to move the Snapshots panel to a specific location in your N-panel sidebar (e.g., "Pipeline" or "Exploration") across all editors.</p>
                 </div>
             </div>
         </div>
@@ -73,7 +69,7 @@
                 <h3 style="font-size:16px; font-weight:700; color:#0f172a; margin-top:0; margin-bottom:12px;">Creating a Snapshot</h3>
                 <p style="font-size:14px; margin-bottom:16px;">Click <strong>Create Snapshot</strong>. If your file hasn't been saved yet, it will prompt you to save first to initialize the system.</p>
                 
-                <div style="background-color:#ffffff; border-left:4px solid #3b82f6; padding:16px; margin-bottom:16px;">
+                <div style="background-color:#ffffff; border-left:4px solid #3b82f6; padding:16px;">
                     <strong style="color:#1e40af; display:block; margin-bottom:8px; font-size:14px;">Interactive Thumbnails</strong>
                     <p style="margin:0; font-size:14px; color:#334155;">When creating a snapshot, check <strong>Capture Thumbnail</strong>. Click and drag in the UI to draw a region; it will automatically be cropped, padded to a square, and saved as a lightweight, high-quality image to keep your project folder small while giving you a clear visual reference.</p>
                 </div>
@@ -95,21 +91,17 @@
             <h2 style="font-size:20px; font-weight:700; color:#1e293b; margin-bottom:16px; display:flex; align-items:center;">
                 <span style="background:#eff6ff; color:#3b82f6; font-size:12px; padding:4px 8px; border-radius:6px; margin-right:12px;">05</span> Contextual Editor Integration
             </h2>
-            <p style="margin-bottom:20px;">The Snapshots panel dynamically adapts to your workspace, allowing you to create partial snapshots of specific data blocks (like an Action or a Node Tree) without saving the entire file.</p>
+            <p style="margin-bottom:20px;">The Snapshots panel dynamically adapts to your workspace, allowing you to create partial snapshots of specific data blocks (like an Action, Mesh Data, or a Node Tree) without saving the entire file.</p>
 
-            <div style="display:flex; flex-wrap:wrap; margin: -6px;">
-                <div style="flex:1 1 280px; padding:6px; box-sizing:border-box;">
-                    <div style="background-color:#f1f5f9; border:1px solid #e2e8f0; padding:20px; border-radius:8px; height:100%; box-sizing:border-box;">
-                        <h3 style="font-size:15px; font-weight:700; color:#0f172a; margin-top:0; margin-bottom:8px;">Node &amp; Properties Editors</h3>
-                        <p style="margin:0; font-size:13px; color:#475569;">When working in the Properties panel or Node Editor (Shader, Geometry Nodes, Compositor), the sidebar adapts to target the active data. Quickly version-control complex setups independently of the main scene.</p>
-                    </div>
+            <div style="display:flex; flex-wrap:wrap; margin:-6px;">
+                <div style="flex:1 1 280px; margin:6px; background-color:#f1f5f9; border:1px solid #e2e8f0; padding:20px; border-radius:8px; box-sizing:border-box;">
+                    <h3 style="font-size:15px; font-weight:700; color:#0f172a; margin-top:0; margin-bottom:8px;">Properties &amp; Node Editors</h3>
+                    <p style="margin:0; font-size:13px; color:#475569;">When working in the Properties panel (Data, Modifiers, Material) or Node Editor (Shader, Geometry Nodes, Compositing), the sidebar adapts to target the active data context. Quickly version-control complex setups independently of the main scene.</p>
                 </div>
 
-                <div style="flex:1 1 280px; padding:6px; box-sizing:border-box;">
-                    <div style="background-color:#f1f5f9; border:1px solid #e2e8f0; padding:20px; border-radius:8px; height:100%; box-sizing:border-box;">
-                        <h3 style="font-size:15px; font-weight:700; color:#0f172a; margin-top:0; margin-bottom:8px;">Dopesheet &amp; Graph Editor</h3>
-                        <p style="margin:0; font-size:13px; color:#475569;">In animation editors, the add-on recognizes the active Action data-block. Snapshot different animation takes, compare them visually using Ghost Curves, and surgically restore specific channels or bones.</p>
-                    </div>
+                <div style="flex:1 1 280px; margin:6px; background-color:#f1f5f9; border:1px solid #e2e8f0; padding:20px; border-radius:8px; box-sizing:border-box;">
+                    <h3 style="font-size:15px; font-weight:700; color:#0f172a; margin-top:0; margin-bottom:8px;">Dopesheet &amp; Graph Editor</h3>
+                    <p style="margin:0; font-size:13px; color:#475569;">In animation editors, the add-on recognizes the active Action data-block. Snapshot different animation takes, compare them visually using Ghost Curves, and surgically restore specific channels or bones.</p>
                 </div>
             </div>
         </div>
@@ -149,7 +141,7 @@
                 </ul>
             </div>
 
-            <div>
+            <div style="margin-bottom:24px;">
                 <h3 style="font-size:16px; font-weight:600; color:#0f172a; margin-bottom:12px; padding-bottom:8px; border-bottom:1px solid #f1f5f9;">6.4 Bulk Restoration (Viewport Menu)</h3>
                 <p style="font-size:14px; margin-bottom:12px;">Select multiple objects in the 3D Viewport and <strong>Right-click &gt; Restore from Snapshot</strong>.</p>
                 <ul style="font-size:14px; padding-left:20px; color:#334155;">
@@ -158,6 +150,21 @@
                     <li style="margin-bottom:8px;"><strong>Restore Modifiers &amp; Constraints:</strong> Synchronizes entire modifier stacks across multiple objects, including embedded Node Trees.</li>
                     <li><strong>Restore Materials &amp; Actions:</strong> Reverts material slot assignments and active Action datablocks for the entire selection.</li>
                 </ul>
+            </div>
+
+            <div>
+                <h3 style="font-size:16px; font-weight:600; color:#0f172a; margin-bottom:12px; padding-bottom:8px; border-bottom:1px solid #f1f5f9;">6.5 Granular Mesh Data Restoration</h3>
+                <p style="font-size:14px; margin-bottom:12px;">Snapshots provides incredibly granular control over your mesh's topology data. By navigating to the <strong>Data Properties</strong> panel, you can take and restore partial snapshots of specific geometric properties:</p>
+                <ul style="font-size:14px; padding-left:20px; color:#334155; margin-bottom:12px;">
+                    <li style="margin-bottom:8px;"><strong>UV Maps:</strong> Restore specific UV unwraps without losing changes to other UV channels.</li>
+                    <li style="margin-bottom:8px;"><strong>Vertex Groups:</strong> Bring back perfectly weighted vertex groups.</li>
+                    <li style="margin-bottom:8px;"><strong>Shape Keys:</strong> Recover lost facial expressions or morph targets.</li>
+                    <li style="margin-bottom:8px;"><strong>Attributes:</strong> Restore color attributes and custom Geometry Node attribute arrays.</li>
+                </ul>
+                <div style="background-color:#ffffff; border-left:4px solid #10b981; padding:16px;">
+                    <strong style="color:#047857; display:block; margin-bottom:8px; font-size:14px;">Edit Mode Masking</strong>
+                    <p style="margin:0; font-size:14px; color:#334155;">If you perform a Mesh Data Restore while in <strong>Edit Mode</strong>, the restored data (UV coordinates, Weights, Attributes) will <em>only</em> be applied to your currently selected vertices, edges, or faces! This allows you to patch specific areas of a mesh using older versions without affecting the rest of the model.</p>
+                </div>
             </div>
         </div>
 
@@ -182,16 +189,16 @@
                 <h3 style="font-size:16px; font-weight:600; color:#0f172a; margin-bottom:12px;">7.2 Scene-Level Restoration</h3>
                 <p style="font-size:14px; margin-bottom:12px;">Inside the expanded global snapshot panel, use the quick-action buttons to instantly restore high-level environments:</p>
                 <div style="display:flex; flex-wrap:wrap; margin:-6px;">
-                    <div style="padding:6px;">
+                    <div style="margin:6px;">
                         <span style="display:inline-block; background:#ffffff; border:1px solid #cbd5e1; padding:6px 12px; border-radius:20px; font-size:12px; color:#0f172a;"><strong>Scene:</strong> Settings &amp; Render Props</span>
                     </div>
-                    <div style="padding:6px;">
+                    <div style="margin:6px;">
                         <span style="display:inline-block; background:#ffffff; border:1px solid #cbd5e1; padding:6px 12px; border-radius:20px; font-size:12px; color:#0f172a;"><strong>World:</strong> Lighting &amp; Shaders</span>
                     </div>
-                    <div style="padding:6px;">
+                    <div style="margin:6px;">
                         <span style="display:inline-block; background:#ffffff; border:1px solid #cbd5e1; padding:6px 12px; border-radius:20px; font-size:12px; color:#0f172a;"><strong>View Layer:</strong> Render Passes</span>
                     </div>
-                    <div style="padding:6px;">
+                    <div style="margin:6px;">
                         <span style="display:inline-block; background:#ffffff; border:1px solid #cbd5e1; padding:6px 12px; border-radius:20px; font-size:12px; color:#0f172a;"><strong>Compositor:</strong> Layered Effects</span>
                     </div>
                 </div>
@@ -204,37 +211,29 @@
                 <span style="background:#eff6ff; color:#3b82f6; font-size:12px; padding:4px 8px; border-radius:6px; margin-right:12px;">08</span> Technical Compatibility
             </h2>
             
-            <div style="display:flex; flex-wrap:wrap; margin: -6px;">
+            <div style="display:flex; flex-wrap:wrap; margin:-6px;">
                 <!-- Card 1 -->
-                <div style="flex:1 1 280px; padding:6px; box-sizing:border-box;">
-                    <div style="background-color:#f1f5f9; border:1px solid #e2e8f0; padding:16px; border-radius:8px; height:100%; box-sizing:border-box; font-size:13px; color:#334155;">
-                        <strong style="color:#0f172a; display:block; margin-bottom:4px; font-size:14px;">Geometry:</strong>
-                        Meshes, Curves, Lattices, Text, Armatures, and Bones.
-                    </div>
+                <div style="flex:1 1 280px; margin:6px; background-color:#f1f5f9; border:1px solid #e2e8f0; padding:16px; border-radius:8px; box-sizing:border-box; font-size:13px; color:#334155;">
+                    <strong style="color:#0f172a; display:block; margin-bottom:4px; font-size:14px;">Geometry:</strong>
+                    Meshes (including UV Maps, Vertex Groups, Shape Keys, Attributes), Curves, Lattices, Text, Armatures, and Bones.
                 </div>
 
                 <!-- Card 2 -->
-                <div style="flex:1 1 280px; padding:6px; box-sizing:border-box;">
-                    <div style="background-color:#f1f5f9; border:1px solid #e2e8f0; padding:16px; border-radius:8px; height:100%; box-sizing:border-box; font-size:13px; color:#334155;">
-                        <strong style="color:#0f172a; display:block; margin-bottom:4px; font-size:14px;">Animation:</strong>
-                        Action Datablocks, Drivers, Keyframes, Modifiers, and Ghost Curves.
-                    </div>
+                <div style="flex:1 1 280px; margin:6px; background-color:#f1f5f9; border:1px solid #e2e8f0; padding:16px; border-radius:8px; box-sizing:border-box; font-size:13px; color:#334155;">
+                    <strong style="color:#0f172a; display:block; margin-bottom:4px; font-size:14px;">Animation:</strong>
+                    Action Datablocks, Drivers, Keyframes, Modifiers, and Ghost Curves.
                 </div>
 
                 <!-- Card 3 -->
-                <div style="flex:1 1 280px; padding:6px; box-sizing:border-box;">
-                    <div style="background-color:#f1f5f9; border:1px solid #e2e8f0; padding:16px; border-radius:8px; height:100%; box-sizing:border-box; font-size:13px; color:#334155;">
-                        <strong style="color:#0f172a; display:block; margin-bottom:4px; font-size:14px;">Nodes:</strong>
-                        Geometry Nodes, Shader trees, and Layered Compositor Effects.
-                    </div>
+                <div style="flex:1 1 280px; margin:6px; background-color:#f1f5f9; border:1px solid #e2e8f0; padding:16px; border-radius:8px; box-sizing:border-box; font-size:13px; color:#334155;">
+                    <strong style="color:#0f172a; display:block; margin-bottom:4px; font-size:14px;">Nodes:</strong>
+                    Geometry Nodes, Shader trees, and Layered Compositor Effects.
                 </div>
 
                 <!-- Card 4 -->
-                <div style="flex:1 1 280px; padding:6px; box-sizing:border-box;">
-                    <div style="background-color:#f1f5f9; border:1px solid #e2e8f0; padding:16px; border-radius:8px; height:100%; box-sizing:border-box; font-size:13px; color:#334155;">
-                        <strong style="color:#0f172a; display:block; margin-bottom:4px; font-size:14px;">Metadata &amp; Misc:</strong>
-                        Grease Pencil, Palettes, and Cameras.
-                    </div>
+                <div style="flex:1 1 280px; margin:6px; background-color:#f1f5f9; border:1px solid #e2e8f0; padding:16px; border-radius:8px; box-sizing:border-box; font-size:13px; color:#334155;">
+                    <strong style="color:#0f172a; display:block; margin-bottom:4px; font-size:14px;">Metadata &amp; Misc:</strong>
+                    Grease Pencil, Palettes, and Cameras.
                 </div>
             </div>
         </div>
