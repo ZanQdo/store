@@ -136,13 +136,12 @@
                 <li style="margin-bottom:12px;"><strong>Show Deform / Solo:</strong> Quickly isolate the skinning skeleton for review.</li>
                 <li style="margin-bottom:12px;"><strong>Set BBones Scale:</strong> Tame B-Bones with a single slider for display thickness.</li>
                 <li style="margin-bottom:12px;"><strong>Reset Constraint Distances:</strong> Fixes stretched limbs by resetting <code>rest_length</code> on 'Stretch To' constraints.</li>
+                <li style="margin-bottom:12px;">
+                    <strong>Edit Custom Shapes:</strong> A huge workflow accelerator. In Pose Mode, select a bone and click this button to instantly enter Edit Mode for its custom shape. Click again to return to posing.
+                    <br><br>
+                    <img src="https://assets.superhivemarket.com/cache/2a67460635244e724fd427b5d08904d7.gif" alt="Edit Custom Shapes Workflow" style="max-width:100%; border-radius:6px; border:1px solid #e2e8f0;">
+                </li>
             </ul>
-
-            <div style="background-color:#ffffff; border:1px solid #e2e8f0; border-radius:8px; padding:20px;">
-                <h3 style="font-size:15px; font-weight:700; color:#0f172a; margin-top:0;">Edit Custom Shapes</h3>
-                <p style="font-size:14px; margin-bottom:12px;">A huge workflow accelerator. In Pose Mode, select a bone and click this button to instantly enter Edit Mode for its custom shape. Click again to return to posing.</p>
-                <img src="https://assets.superhivemarket.com/cache/2a67460635244e724fd427b5d08904d7.gif" alt="Edit Custom Shapes Workflow" style="max-width:100%; border-radius:6px; border:1px solid #e2e8f0;">
-            </div>
         </div>
 
         <!-- 6. Weighting Tools -->
@@ -171,13 +170,13 @@
                 </div>
             </div>
 
-            <div style="background-color:#f8fafc; border:1px solid #e2e8f0; border-radius:12px; padding:24px; margin-bottom:24px;">
-                <h3 style="font-size:15px; font-weight:700; color:#0f172a; margin-top:0;">Transfer Vertex Groups</h3>
+            <div style="margin-bottom:24px;">
+                <h3 style="font-size:16px; font-weight:600; color:#0f172a; margin-bottom:8px;">Transfer Vertex Groups</h3>
                 <p style="font-size:14px; margin-bottom:12px;">Copy weights from active mesh to others (e.g. clothing). Transfer Modes:</p>
                 <ul style="font-size:14px; padding-left:20px; margin-bottom:0; color:#334155;">
                     <li style="margin-bottom:8px;"><strong>Auto:</strong> The smart choice. Attempts topology match, falls back to projection.</li>
-                    <li style="margin-bottom:8px;"><strong>Topology:</strong> For exact copies between identical meshes.</li>
-                    <li><strong>Interpolated:</strong> For projecting weights between different meshes.</li>
+                    <li style="margin-bottom:8px;"><strong>Topology:</strong> For exact copies between identical meshes. Meshes with different topology are skipped.</li>
+                    <li><strong>Interpolated:</strong> For projecting weights between meshes with different topology.</li>
                 </ul>
             </div>
             
