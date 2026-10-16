@@ -78,13 +78,26 @@
                 <h3 style="font-size:16px; font-weight:600; color:#0f172a; margin-bottom:12px; padding-bottom:8px; border-bottom:1px solid #f1f5f9;">3.2 Project Setup</h3>
                 <p style="margin-bottom:12px; font-size:14px;">Because Automaton utilizes Blender's native Project system, there is no complex setup. Just ensure you are working within a defined Blender Project.</p>
                 <ul style="font-size:14px; padding-left:20px; color:#334155; margin-bottom:16px;">
-                    <li style="margin-bottom:8px;">Open Blender's <strong style="color:#0f172a;">Project preferences</strong>. Automaton will automatically detect your active Project.</li>
+                    <li style="margin-bottom:8px;">Open Blender's <strong style="color:#0f172a;">Project Settings</strong>. Automaton will automatically detect your active Project.</li>
                     <li style="margin-bottom:8px;">Define your <strong style="color:#0f172a;">Scripts Folder</strong>. This is a relative path inside your project where your automation <code style="background-color:#e2e8f0; color:#0f172a; padding:2px 6px; border-radius:4px; font-size:13px; font-family:monospace;">.py</code> files are stored (defaults to <code style="background-color:#e2e8f0; color:#0f172a; padding:2px 6px; border-radius:4px; font-size:13px; font-family:monospace;">scripts</code>).</li>
                 </ul>
+
+                <div style="margin-bottom: 24px; border: 1px solid #e2e8f0; border-radius: 8px; overflow: hidden; background-color: #f8fafc;">
+                    <img src="https://assets.superhivemarket.com/cache/49358f2f4a1c476880f2f12ab53060a8.png" alt="Project Configuration" style="display: block; width: 100%; height: auto;" />
+                </div>
 
                 <div style="background-color:#ffffff; border-left:4px solid #3b82f6; padding:16px; border:1px solid #e2e8f0; border-left-width:4px; margin-bottom:16px; border-radius:4px;">
                     <strong style="color:#1e40af; display:block; margin-bottom:8px; font-size:14px;">Shared Pipeline Configuration</strong>
                     <p style="margin:0; font-size:14px; color:#334155;">Automaton automatically saves your rules to an <code style="background-color:#e2e8f0; color:#0f172a; padding:2px 6px; border-radius:4px; font-size:13px; font-family:monospace;">automaton.json</code> file located inside your project's hidden <code style="background-color:#e2e8f0; color:#0f172a; padding:2px 6px; border-radius:4px; font-size:13px; font-family:monospace;">.blender_project</code> directory. Commit this file to your repository so your entire team shares the same rules instantly!</p>
+                </div>
+
+                <div style="background-color:#fff1f2; border-left:4px solid #f43f5e; padding:16px; border-radius:0 8px 8px 0;">
+                    <strong style="color:#9f1239; font-size:14px; display:flex; align-items:center;">
+                        <span style="font-size:18px; margin-right:8px;">⚠️</span> Security Recommendation
+                    </strong>
+                    <p style="margin:8px 0 0 0; color:#881337; font-size:14px;">
+                        Because Automaton executes Python files directly, any script placed in the shared automation folder will run arbitrary code on your team's machines. For studio environments, it is highly recommended to configure network or version control permissions so that the scripts folder is read-only for the majority of the team. Only trusted pipeline TDs or administrators should have write access to this folder and its configurations.
+                    </p>
                 </div>
             </div>
         </div>
@@ -94,10 +107,10 @@
             <h2 style="font-size:20px; font-weight:700; color:#1e293b; margin-bottom:16px; display:flex; align-items:center;">
                 <span style="background:#eff6ff; color:#3b82f6; font-size:12px; padding:4px 8px; border-radius:6px; margin-right:12px;">04</span> Creating Rules
             </h2>
-            <p style="margin-bottom:16px; font-size:14px;">A rule connects a script Target to a specific Blender event Trigger.</p>
+            <p style="margin-bottom:16px; font-size:14px;">A rule connects a script Target to a specific Blender event Trigger. You can add and manage these directly within Blender's <strong>Project Settings</strong>.</p>
             
             <ul style="font-size:14px; padding-left:20px; color:#334155; margin-bottom:24px;">
-                <li style="margin-bottom:8px;">Click the <strong style="color:#0f172a; border:1px solid #cbd5e1; border-radius:4px; padding:0 6px; font-size:13px;">+</strong> (Add) button under the Rules List in the Project preferences.</li>
+                <li style="margin-bottom:8px;">Click the <strong style="color:#0f172a; border:1px solid #cbd5e1; border-radius:4px; padding:0 6px; font-size:13px;">+</strong> (Add) button under the Rules List in the Project Settings.</li>
                 <li style="margin-bottom:8px;">Select your <strong style="color:#0f172a;">Target</strong> (a specific <code style="background-color:#e2e8f0; color:#0f172a; padding:2px 6px; border-radius:4px; font-size:13px; font-family:monospace;">.py</code> file or a whole folder to run recursively in alphabetical order).</li>
                 <li style="margin-bottom:8px;">Select your <strong style="color:#0f172a;">Trigger</strong> (e.g., "Before Save", "After Render").</li>
             </ul>
@@ -178,13 +191,17 @@
         </div>
 
         <!-- 6. The N-Panel Interface -->
-        <div style="margin-bottom:60px;">
+        <div style="margin-bottom:40px;">
             <h2 style="font-size:20px; font-weight:700; color:#1e293b; margin-bottom:16px; display:flex; align-items:center;">
                 <span style="background:#eff6ff; color:#3b82f6; font-size:12px; padding:4px 8px; border-radius:6px; margin-right:12px;">06</span> The N-Panel Interface (Manual Control)
             </h2>
             <p style="margin-bottom:20px; font-size:14px; color:#64748b;">
                 Automaton provides a user interface in the 3D Viewport and the Video Sequencer (VSE). Open the side panel (shortcut <strong style="color:#0f172a; border:1px solid #cbd5e1; border-radius:4px; padding:0 4px; font-size:12px;">N</strong>) and look for the Automaton tab.
             </p>
+
+            <div style="margin-bottom: 24px; border: 1px solid #e2e8f0; border-radius: 8px; overflow: hidden; background-color: #f8fafc; max-width: 350px;">
+                <img src="https://assets.superhivemarket.com/cache/894ea3f8f2d8055eb40e6396ea7a1c32.png" alt="NPanel UI" style="display: block; width: 100%; height: auto;" />
+            </div>
 
             <div style="margin-bottom:24px;">
                 <h3 style="font-size:16px; font-weight:600; color:#0f172a; margin-bottom:12px; padding-bottom:8px; border-bottom:1px solid #f1f5f9;">6.1 Running Scripts Manually</h3>
@@ -199,14 +216,31 @@
                 <ul style="font-size:14px; padding-left:20px; color:#334155; margin:0;">
                     <li style="margin-bottom:8px;">Underneath each script, you will see a checklist of its active automated rules.</li>
                     <li style="margin-bottom:8px;">Unchecking the box next to a rule creates a <strong style="color:#0f172a;">Local Override</strong>.</li>
-                    <li>This completely disables that automation rule <em>only</em> for the current scene. This is saved within the <code style="background-color:#e2e8f0; color:#0f172a; padding:2px 6px; border-radius:4px; font-size:13px; font-family:monospace;">.blend</code> file, allowing artists to bypass specific automations when necessary without breaking the shared pipeline config for everyone else.</li>
+                    <li>This temporarily disables that automation rule <em>only</em> for the current scene. This is saved within the <code style="background-color:#e2e8f0; color:#0f172a; padding:2px 6px; border-radius:4px; font-size:13px; font-family:monospace;">.blend</code> file, allowing artists to bypass specific automations when necessary without breaking the shared pipeline config for everyone else.</li>
                 </ul>
             </div>
         </div>
 
+        <!-- 7. Automaton Preferences -->
+        <div style="margin-bottom:60px;">
+            <h2 style="font-size:20px; font-weight:700; color:#1e293b; margin-bottom:16px; display:flex; align-items:center;">
+                <span style="background:#eff6ff; color:#3b82f6; font-size:12px; padding:4px 8px; border-radius:6px; margin-right:12px;">07</span> Automaton Preferences
+            </h2>
+            <p style="font-size:14px; margin-bottom:12px;">Under <strong style="color:#0f172a;">Edit &gt; Preferences &gt; Add-ons &gt; Automaton</strong>, you can adjust global behaviors for the add-on interface:</p>
+            
+            <div style="margin-bottom: 20px; border: 1px solid #e2e8f0; border-radius: 8px; overflow: hidden; background-color: #f8fafc;">
+                <img src="https://assets.superhivemarket.com/cache/2b5f2309834b49616438c1cd14806913.png" alt="General Preferences" style="display: block; width: 100%; height: auto;" />
+            </div>
+
+            <ul style="font-size:14px; padding-left:20px; color:#334155; margin:0;">
+                <li style="margin-bottom:8px;"><strong style="color:#0f172a;">Tab Name:</strong> Change the name of the N-Panel tab (defaults to "Automaton"). Useful if you want to consolidate multiple add-ons into one tab.</li>
+                <li><strong style="color:#0f172a;">Visibility:</strong> Toggle whether the Automaton panel appears in the 3D Viewport, the Sequence Editor, or both.</li>
+            </ul>
+        </div>
+
         <!-- Footer -->
         <div style="text-align:center; padding-top:40px; border-top:1px solid #e2e8f0; color:#94a3b8; font-size:12px;">
-            <p>© blenderaddon.com</p>
+            <p>© Automaton Add-on</p>
         </div>
 
     </div>
